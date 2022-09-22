@@ -1,0 +1,93 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.login .vr {
+    margin-left: 50%;
+    margin-right: 50%;
+    background-color: rgb(0, 0, 0, .5);
+    width: 1px;
+}
+
+.login .row,
+.signup .row {
+    margin: 0;
+    padding: 0;
+}
+
+.login .btn-primary,
+.signup .btn-primary {
+    background-color: #16bf3b;
+}
+
+.login .btn-primary:hover,
+.signup .btn-primary:hover {
+    background-color: #137e1c;
+    border-color: #137e1c;
+}
+
+.login .btn-primary,
+.login .btn-secondary,
+.signup .btn-primary,
+.signup .btn-secondary,
+.signup .btn-outline-danger {
+    font-weight: 600;
+    width: 100%;
+    border-radius: 0px;
+}
+
+.login .panel,
+.signup .panel {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.login .title h2,
+.signup .title h2 {
+    font-weight: 600;
+    padding: 12px;
+    padding-left: 40px;
+    color: #16bf3b;
+}
+
+.login .item,
+.signup .item {
+    padding: 40px;
+    min-height: 350px;
+}
+
+.login .tab,
+.signup .tab {
+    padding-left: 40px;
+}
+
+.login .item .subtitle {
+    font-weight: 400;
+}
+
+.cabecalho .navbar {
+    background-color: #5bd677;
+
+
+}
+
+.cabecalho .navbar a {
+    font-weight: 600;
+    color: black;
+}
+
+.cabecalho .navbar .dropdown-item:hover {
+    color: black;
+    background-color: #5bd677;
+}
+
+.rodape {
+    background-color: #5bd677;
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+}

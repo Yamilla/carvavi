@@ -22,9 +22,6 @@ include_once("../classes/manipulaDados.php");
                         <th>Cidade</th>
                         <th>Estado</th>
                         <th>CEP</th>
-                        <th>Email</th>
-                        <th>Usuário</th>
-                        <th>Senha</th>
                         <th>funcionário</th>
                         <th>ALTERAR </th>
                         <th>EXCLUIR </th>
@@ -53,9 +50,6 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['cidade']; ?></td>
                                 <td><?= $row['estado']; ?></td>
                                 <td><?= $row['cep']; ?></td>
-                                <td><?= $row['email']; ?></td>
-                                <td><?= $row['usuario']; ?></td>
-                                <td><?= $row['senha']; ?></td>
                                 <td><?= $row['id_funcionario']; ?></td>
                                 <input type="hidden" name="recId" value="<?= $row['id_paciente']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_paciente']; ?>">
@@ -70,9 +64,6 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recCidade" value="<?= $row['cidade']; ?>">
                                 <input type="hidden" name="recEstado" value="<?= $row['estado']; ?>">
                                 <input type="hidden" name="recCep" value="<?= $row['cep']; ?>">
-                                <input type="hidden" name="recEmail" value="<?= $row['email']; ?>">
-                                <input type="hidden" name="recUsuario" value="<?= $row['usuario']; ?>">
-                                <input type="hidden" name="recSenha" value="<?= $row['senha']; ?>">
                                 <input type="hidden" name="recIdfunc" value="<?= $row['id_funcionario']; ?>">
                                 <td><a class="btn btn-outline-warning" href="?secao=alterarpaciente" role="button">Alterar</a></td>
                                 <td><button type="submit" name="botao" value="excluir" class="btn btn-outline-danger">Excluir</button></td>

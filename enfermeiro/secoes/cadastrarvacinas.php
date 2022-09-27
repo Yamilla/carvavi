@@ -37,9 +37,9 @@ include_once("../classes/manipulaDados.php");
                                 <input type="text" name="txtLaboratorio" class="form-control" placeholder="Laboratório" required />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione o funcionario: </label>
+                                <label for="exampleFormControlSelect1">Selecione o funcionário: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="id_funcionario">
-                                <option selected>Nome do funcionario</option>
+                                <option selected>Nome do funcionário</option>
                                     <?php
                                     $busca = new manipulaDados();
                                     $busca->setTable("funcionario");

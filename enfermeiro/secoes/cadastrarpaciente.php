@@ -1,6 +1,5 @@
 <?php
 include_once("../classes/manipulaDados.php");
-
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
@@ -73,9 +72,9 @@ include_once("../classes/manipulaDados.php");
                                 <input type="text" name="txtSenha" class="form-control" placeholder="Senha" required />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione o funcionario: </label>
+                                <label for="exampleFormControlSelect1">Selecione o funcionário: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="id_funcionario">
-                                <option selected>Nome do funcionario</option>
+                                    <option selected>Nome do funcionário</option>
                                     <?php
                                     $busca = new manipulaDados();
                                     $busca->setTable("funcionario");

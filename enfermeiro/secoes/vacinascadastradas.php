@@ -15,7 +15,7 @@ include_once("../classes/manipulaDados.php");
                         <th>Quantidade</th>
                         <th>Data de fabricação</th>
                         <th>Data de validade</th>
-                        <th>laboratorio</th>
+                        <th>laboratório</th>
                         <th>funcionário</th>
                         <th>ALTERAR </th>
                         <th>EXCLUIR </th>

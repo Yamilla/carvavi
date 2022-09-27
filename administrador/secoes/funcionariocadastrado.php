@@ -4,13 +4,13 @@ include_once("../classes/manipulaDados.php");
 
 <div class="container">
     <div class=" text-center mt-5 ">
-        <h1>Funcionarios cadastrados</h1>
+        <h1>Funcionários cadastrados</h1>
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nome do funcionário</th>
+                        <th>Nome</th>
                         <th>CPF</th>
                         <th>RG</th>
                         <th>Data de nascimento</th>
@@ -22,9 +22,6 @@ include_once("../classes/manipulaDados.php");
                         <th>Estado</th>
                         <th>CEP</th>
                         <th>Cargo</th>
-                        <th>Email</th>
-                        <th>Usuário</th>
-                        <th>Senha</th>
                         <th>UBS</th>
                         <th>ALTERAR </th>
                         <th>EXCLUIR </th>
@@ -52,10 +49,7 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['estado']; ?></td>
                                 <td><?= $row['cep']; ?></td>
                                 <td><?= $row['cargo']; ?></td>
-                                <td><?= $row['email']; ?></td>
-                                <td><?= $row['usuario']; ?></td>
-                                <td><?= $row['senha']; ?></td>
-                                <td><?= $row['id_unidade']; ?></td>
+                                <td> <?= $row['id_unidade']; ?></td>
                                 <input type="hidden" name="recId" value="<?= $row['id_funcionario']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome']; ?>">
                                 <input type="hidden" name="recCpf" value="<?= $row['cpf']; ?>">
@@ -69,10 +63,7 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recEstado" value="<?= $row['estado']; ?>">
                                 <input type="hidden" name="recCep" value="<?= $row['cep']; ?>">
                                 <input type="hidden" name="recCargo" value="<?= $row['cargo']; ?>">
-                                <input type="hidden" name="recEmail" value="<?= $row['email']; ?>">
-                                <input type="hidden" name="recUsuario" value="<?= $row['usuario']; ?>">
-                                <input type="hidden" name="recSenha" value="<?= $row['senha']; ?>">
-                                <input type="hidden" name="recIduni" value="<?= $row['id_unidade']; ?>">
+                                <input type="hidden" name="recIduni" value="  <?= $row['id_unidade']; ?>">
                                 <td><a class="btn btn-outline-warning" href="?secao=alterarfuncionario" role="button">Alterar</a></td>
                                 <td><button type="submit" name="botao" value="excluir" class="btn btn-outline-danger">Excluir</button></td>
                             </tr>

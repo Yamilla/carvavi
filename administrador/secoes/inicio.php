@@ -8,13 +8,45 @@
     <hr>
     <div class="row d-line">
       <article class="mt-3 col-lg-4 col-md-6 col-sm-12">
-        <div class="list-group">
-          <a href="?secao=cadastrarfuncionario" class="list-group-item list-group-item-success list-group-item-action">Cadastrar funcionário</a>
-          <a href="?secao=cadastrarunidade" class="list-group-item list-group-item-success list-group-item-action">Cadastrar unidade básica de saúde</a>
-          <a href="?secao=funcionariocadastrado" class="list-group-item list-group-item-success list-group-item-action">Funcionários cadastrados</a>
-          <a href="?secao=unidadecadastrada" class="list-group-item list-group-item-success list-group-item-action">Unidades básicas de saúde cadastradas</a>
+        <div class="card border-success" style="width: 18rem;">
+          <div class="card-body border-success">
+            <h5 class="card-title">Cadastrar funcionário</h5>
+            <p class="card-text"></p>
+            <a href="?secao=cadastrarfuncionario" class="btn btn-success">Ir</a>
+          </div>
         </div>
       </article>
+
+      <article class="mt-3 col-lg-4 col-md-6 col-sm-12">
+        <div class="card border-success" style="width: 18rem;">
+          <div class="card-body border-success">
+            <h5 class="card-title">Cadastrar unidade básica de saúde</h5>
+            <p class="card-text"></p>
+            <a href="?secao=cadastrarunidade" class="btn btn-success">Ir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-3 col-lg-4 col-md-6 col-sm-12">
+        <div class="card border-success" style="width: 18rem;">
+          <div class="card-body border-success">
+            <h5 class="card-title">Funcionários cadastrados</h5>
+            <p class="card-text"></p>
+            <a href="?secao=funcionariocadastrado" class="btn btn-success">Ir</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="mt-3 col-lg-4 col-md-6 col-sm-12">
+        <div class="card border-success" style="width: 18rem;">
+          <div class="card-body border-success">
+            <h5 class="card-title">Unidades básicas de saúde cadastradas</h5>
+            <p class="card-text"></p>
+            <a href="?secao=unidadecadastrada" class="btn btn-success">Ir</a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </section>
 </div>

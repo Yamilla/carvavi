@@ -1,6 +1,5 @@
 <?php
 include_once("../classes/manipulaDados.php");
-
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
@@ -13,15 +12,15 @@ include_once("../classes/manipulaDados.php");
                     <div class="container">
                         <form method="post" enctype="multipart/form-data" action="controller/alterarvacina.php">
                             <div class="mb-3">
-                                <label>Id: </label>
+                                <label>Id:</label>
                                 <input type="text" name="txtIdvac" class="form-control" placeholder="Id" required />
                             </div>
                             <div class="mb-3">
-                                <label>Nome da vacina: </label>
+                                <label>Nome da vacina:</label>
                                 <input type="text" name="txtNomevac" class="form-control" placeholder="Nome da vacina" required />
                             </div>
                             <div class="mb-3">
-                                <label>lote: </label>
+                                <label>lote:</label>
                                 <input type="text" name="txtLote" class="form-control" placeholder="Lote" required />
                             </div>
                             <div class="mb-3">
@@ -41,9 +40,9 @@ include_once("../classes/manipulaDados.php");
                                 <input type="text" name="txtLaboratorio" class="form-control" placeholder="Laboratório" required />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione o funcionario: </label>
+                                <label for="exampleFormControlSelect1">Selecione o funcionário: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="id_funcionario">
-                                    <option selected>Nome do funcionario</option>
+                                    <option selected>Nome do funcionário</option>
                                     <?php
                                     $busca = new manipulaDados();
                                     $busca->setTable("funcionario");

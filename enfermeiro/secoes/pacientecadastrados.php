@@ -1,7 +1,6 @@
 <?php
 include_once("../classes/manipulaDados.php");
 ?>
-
 <div class="container">
     <div class=" text-center mt-5 ">
         <h1>Pacientes cadastrados</h1>
@@ -65,8 +64,8 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recEstado" value="<?= $row['estado']; ?>">
                                 <input type="hidden" name="recCep" value="<?= $row['cep']; ?>">
                                 <input type="hidden" name="recIdfunc" value="<?= $row['id_funcionario']; ?>">
-                                <td><a class="btn btn-outline-warning" href="?secao=alterarpaciente" role="button">Alterar</a></td>
-                                <td><button type="submit" name="botao" value="excluir" class="btn btn-outline-danger">Excluir</button></td>
+                                <td><a class="btn btn-outline-warning" href="<?= "?secao=alterarpaciente&id=" . $row['id_paciente'] . "&nome=" . $row['nome_paciente'] . "&cpf=" . $row['cpf'] . "&rg=" . $row['rg'] . "&sus=" . $row['sus'] . "&data=" . $row['nascimento'] . "&telefone=" . $row['telefone'] . "&rua=" . $row['rua'] . "&numero=" . $row['numero'] . "&bairro=" . $row['bairro'] . "&cidade=" . $row['cidade'] . "&estado=" . $row['estado'] . "&cep=" . $row['cep'] . "&idfunc=" . $row['id_funcionario'] ?>" role="button">Alterar</a></td>
+                                <td><a class="btn btn-outline-danger" href="<?= "controller/excluirpaciente.php?id=" . $row['id_paciente'] ?>" role="button">Excluir</a></td>
                                 <td><a class="btn btn-outline-success" href="?secao=vacinaaplicada" role="button">Vacinar</a></td>
                             </tr>
                         </form>

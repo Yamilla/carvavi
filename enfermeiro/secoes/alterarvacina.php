@@ -1,5 +1,13 @@
 <?php
 include_once("../classes/manipulaDados.php");
+$id = $_GET['id'];
+$nome = $_GET['nome'];
+$lote = $_GET['lote'];
+$quantidade = $_GET['quantidade'];
+$fabricacao = $_GET['fabricacao'];
+$validade = $_GET['validade'];
+$laboratorio = $_GET['laboratorio'];
+$id_funcionario = $_GET['idfunc'];
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
@@ -10,34 +18,30 @@ include_once("../classes/manipulaDados.php");
             <div class="card mt-2 mx-auto p-4 bg-light">
                 <div class="card-body bg-light">
                     <div class="container">
-                        <form method="post" enctype="multipart/form-data" action="controller/alterarvacina.php">
-                            <div class="mb-3">
-                                <label>Id:</label>
-                                <input type="text" name="txtIdvac" class="form-control" placeholder="Id" required />
-                            </div>
+                        <form method="post" enctype="multipart/form-data" action="<?="controller/alterarvacina.php?id=".$id?>">
                             <div class="mb-3">
                                 <label>Nome da vacina:</label>
-                                <input type="text" name="txtNomevac" class="form-control" placeholder="Nome da vacina" required />
+                                <input type="text" name="txtNomevac" class="form-control" value="<?php echo $nome; ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label>lote:</label>
-                                <input type="text" name="txtLote" class="form-control" placeholder="Lote" required />
+                                <input type="text" name="txtLote" class="form-control" value="<?php echo $lote; ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label>Quantidade: </label>
-                                <input type="number" name="txtQuantidade" class="form-control" placeholder="Quantidade" required />
+                                <input type="number" name="txtQuantidade" class="form-control" value="<?php echo $quantidade; ?>"required />
                             </div>
                             <div class="mb-3">
                                 <label>Data de fabricação: </label>
-                                <input type="date" name="txtDatafabric" class="form-control" placeholder="" required />
+                                <input type="date" name="txtDatafabric" class="form-control" value="<?php echo $fabricacao; ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label>Data de validade: </label>
-                                <input type="date" name="txtDatavalid" class="form-control" placeholder="" required />
+                                <input type="date" name="txtDatavalid" class="form-control"value="<?php echo $validade; ?>"required />
                             </div>
                             <div class="mb-3">
                                 <label>Laboratório: </label>
-                                <input type="text" name="txtLaboratorio" class="form-control" placeholder="Laboratório" required />
+                                <input type="text" name="txtLaboratorio" class="form-control" value="<?php echo $laboratorio; ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlSelect1">Selecione o funcionário: </label>

@@ -3,7 +3,7 @@
     function converte($String){
         return iconv("UTF-8", "ISO8859-1",$String);
     } 
-$id = $_POST['txtId'];
+$id = $_GET['id'];
 $nome = $_POST['txtNome'];
 $cpf = $_POST['txtCpf'];
 $rg = $_POST['txtRg'];

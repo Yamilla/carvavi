@@ -3,7 +3,7 @@
     function converte($String){
         return iconv("UTF-8", "ISO8859-1",$String);
     } 
-$id = $_POST['txtIdvac']; 
+$id = $_GET['id']; 
 $nome = $_POST['txtNomevac'];
 $lote = $_POST['txtLote'];
 $quantidade = $_POST['txtQuantidade'];
@@ -20,4 +20,3 @@ $altera->setValueId($id);
 $altera->update();
 echo '<script>alert("'.$altera->getStatus().'");</script>';
 echo "<script>location = '../home.php'; </script>";
-?>

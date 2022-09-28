@@ -46,8 +46,8 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recValidade" value="<?= $row['data_validade']; ?>">
                                 <input type="hidden" name="recLaboratorio" value="<?= $row['laboratorio_vacina']; ?>">
                                 <input type="hidden" name="recIdfunc" value="<?= $row['id_funcionario']; ?>">
-                                <td><a class="btn btn-outline-warning" href="?secao=alterarvacina" role="button">Alterar</a></td>
-                                <td><a class="btn btn-outline-danger" href="?secao=vacinaaplicada" role="button">Excluir</a></td>
+                                <td><a class="btn btn-outline-warning" href="<?="?secao=alterarvacina&id=".$row['id_vacina']. "&nome=".$row['nome_vacina']."&lote=".$row['lote_vacina']. "&quantidade=".$row['quantidade']."&fabricacao=".$row['data_fabricacao']. "&validade=".$row['data_validade']. "&laboratorio=".$row['laboratorio_vacina']."&idfunc=".$row['id_funcionario']?>" role="button">Alterar</a></td>
+                                <td><a class="btn btn-outline-danger" href="<?="controller/excluirvacina.php?id=".$row['id_vacina']?>" role="button">Excluir</a></td>
                             </tr>
                         </form>
                     <?php

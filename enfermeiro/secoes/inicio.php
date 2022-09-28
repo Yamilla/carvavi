@@ -1,8 +1,11 @@
 <div class="container h-100 mt-4">
   <h2>Técnico de enfermagem</h2>
   <hr>
-  <h4>Bem-vindo(a) <?= session_start();
-                    $usuario = $_SESSION['usu']; ?> a área do funcionário</h4>
+  <?php 
+  session_start();
+  $login = $_SESSION['usu'];
+  echo '<h4>Bem vindo(a) ' . $login . ' a área do Técnico de enfermagem</h4>';
+  ?>
   <section>
     <h2>ACESSO RÁPIDO</h2>
     <hr>
@@ -74,7 +77,7 @@
           <div class="card-body border-success">
             <h5 class="card-title">Cartão de vacina</h5>
             <p class="card-text"></p>
-            <a href="?secao=pacientesvacinados" class="btn btn-success">Ir</a>
+            <a href="?secao=cartaovacina" class="btn btn-success">Ir</a>
           </div>
         </div>
       </article>

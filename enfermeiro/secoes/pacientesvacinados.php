@@ -57,6 +57,7 @@ include_once("../classes/manipulaDados.php");
                                             
                                                 <div class="accordion-body"></div>
                                                 <div class="card" style="width: 17rem;">
+                                
                                                     <ul class="list-group list-group-flush">
                                                         <li class="list-group-item"><label>Nome:</label> <?= $row['nome_vacina']; ?></li>
                                                         <li class="list-group-item"><label>Lote:</label> <?= $row['lote_vacina']; ?></li>
@@ -64,7 +65,7 @@ include_once("../classes/manipulaDados.php");
                                                         <li class="list-group-item"><label>Dose:</label> <?= $row['dose']; ?></li>
                                                         <li class="list-group-item"><label>Data da aplicação:</label> <?= $row['data_aplicacao']; ?></li>
                                                     </ul>
-
+                    
                                                 </div>
                                         </div>
 

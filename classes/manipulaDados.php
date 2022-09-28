@@ -100,13 +100,6 @@ class manipulaDados extends conexao
         $this->query = self::execSQL($this->sql);
         return $this->query;
     }
-    public function vacinaAplicada()
-    {
-        $this->sql = "SELECT * from vacinas_aplicadas INNER JOIN vacina ON vacina.id_vacina = vacinas_aplicadas.id_vacina;";
-        $this->query = self::execSQL($this->sql);
-        return $this->query;
-    }
-    
-    
+   
 
 }

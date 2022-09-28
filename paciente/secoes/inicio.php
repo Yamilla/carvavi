@@ -1,8 +1,11 @@
 <div class="container h-100 mt-4">
   <h2>Paciente</h2>
   <hr>
-  <h4>Bem-vindo(a) <?= session_start();
-                    $usuario = $_SESSION['usu']; ?> a área do Paciente</h4>
+  <?php 
+  session_start();
+  $login = $_SESSION['usu'];
+  echo '<h4>Bem vindo(a) ' . $login . ' a área do Paciente</h4>';
+  ?>
   <section>
     <h2>ACESSO RÁPIDO</h2>
     <hr>

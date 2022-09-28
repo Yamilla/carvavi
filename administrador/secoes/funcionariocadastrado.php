@@ -65,7 +65,7 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recCargo" value="<?= $row['cargo']; ?>">
                                 <input type="hidden" name="recIduni" value="  <?= $row['id_unidade']; ?>">
                                 <td><a class="btn btn-outline-warning" href="?secao=alterarfuncionario" role="button">Alterar</a></td>
-                                <td><button type="submit" name="botao" value="excluir" class="btn btn-outline-danger">Excluir</button></td>
+                                <td><a class="btn btn-outline-danger" href="" role="button">Excluir</a></td>
                             </tr>
                         </form>
                     <?php

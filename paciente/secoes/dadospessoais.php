@@ -40,7 +40,7 @@ include_once("../classes/manipulaDados.php");
                         <form method="post">
                             <tr>
                                 <td><?= $row['id_paciente']; ?></td>
-                                <td><?= $row['nome']; ?></td>
+                                <td><?= $row['nome_paciente']; ?></td>
                                 <td><?= $row['cpf']; ?></td>
                                 <td><?= $row['rg']; ?></td>
                                 <td><?= $row['sus']; ?></td>
@@ -57,7 +57,7 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['senha']; ?></td>
                                 <td><?= $row['id_funcionario']; ?></td>
                                 <input type="hidden" name="recId" value="<?= $row['id_paciente']; ?>">
-                                <input type="hidden" name="recNome" value="<?= $row['nome']; ?>">
+                                <input type="hidden" name="recNome" value="<?= $row['nome_paciente']; ?>">
                                 <input type="hidden" name="recCpf" value="<?= $row['cpf']; ?>">
                                 <input type="hidden" name="recRg" value="<?= $row['rg']; ?>">
                                 <input type="hidden" name="recSus" value="<?= $row['rg']; ?>">

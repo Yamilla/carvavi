@@ -45,9 +45,9 @@ class manipulaDados extends conexao
     {
         $this->sql = "UPDATE $this->table SET $this->fields WHERE $this->fieldId = '$this->valueId'";
         if (self::execSQL($this->sql)) {
-            $this->status = "Alterado com sucesso!" . $this->sql;
+            $this->status = "Alterado com sucesso!";
         } else {
-            $this->status = "Erro ao alterar a tabela" . $this->table;
+            $this->status = "Erro ao alterar";
         }
     }
     public function delete()
@@ -56,7 +56,7 @@ class manipulaDados extends conexao
         if (self::execSQL($this->sql)) {
             $this->status = "Excluido com sucesso!";
         } else {
-            $this->status = "Erro ao excluir a tabela" . $this->table;
+            $this->status = "Erro ao excluir";
         }
     }
     public function getAllDataTable()
@@ -93,19 +93,20 @@ class manipulaDados extends conexao
         return $this->query;
     }
 
-    public function pacienteVacinado()
-    {
-        $this->sql = "SELECT * from paciente INNER JOIN vacinas_aplicadas on paciente.id_paciente = vacinas_aplicadas.id_paciente
-                    INNER JOIN vacina ON vacina.id_vacina = vacinas_aplicadas.id_vacina";
-        $this->query = self::execSQL($this->sql);
-        return $this->query;
-    }
-
     public function vacinasAplicadas($id_paciente){
         $this->sql = "SELECT * from vacinas_aplicadas INNER JOIN paciente on paciente.id_paciente = vacinas_aplicadas.id_paciente INNER JOIN vacina ON vacina.id_vacina = vacinas_aplicadas.id_vacina WHERE vacinas_aplicadas.id_paciente = '$id_paciente'";
         $this->query = self::execSQL($this->sql);
         return $this->query;
     }
+    public function cartaoVacina($id_paciente){
+        $this->sql = "SELECT * from vacinas_aplicadas 
+        INNER JOIN paciente on paciente.id_paciente = vacinas_aplicadas.id_paciente 
+        INNER JOIN vacina ON vacina.id_vacina = vacinas_aplicadas.id_vacina
+        inner join funcionario on paciente.id_funcionario = funcionario.id_funcionario
+        inner join unidade_de_saude on funcionario.id_unidade = unidade_de_saude.id_unidade
+        WHERE vacinas_aplicadas.id_paciente = '$id_paciente'";
+        $this->query = self::execSQL($this->sql);
+        return $this->query;
+    }
    
-
 }

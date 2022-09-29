@@ -32,7 +32,7 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recNome" value="<?= $row['nome_paciente']; ?>">
 
                                 <td><a class="btn btn-outline-success" href="<?= "?secao=vacinapaciente&id=" . $row['id_paciente'] ?>" role="button">Visualizar vacinas</a></td>
-                                <td><a class="btn btn-outline-success" href="controller/gerarcartaovacina.php" role="button">Gerar cartão de vacina</a></td>
+                                <td><a class="btn btn-outline-success" href="<?="controller/gerarcartaovacina.php?id=" . $row['id_paciente'] ?>" role="button">Gerar cartão de vacina</a></td>
 
                             </tr>
                         </form>

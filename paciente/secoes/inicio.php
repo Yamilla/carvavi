@@ -26,7 +26,7 @@
           <div class="card-body border-success">
             <h5 class="card-title">Cartão de vacina</h5>
             <p class="card-text"></p>
-            <a href="?secao=cadastrarvacinas" class="btn btn-success">Ir</a>
+            <a href="?secao=gerarcartao" class="btn btn-success">Ir</a>
           </div>
         </div>
       </article>

@@ -9,21 +9,19 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Pacientes
+            Dados pessoais
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="?secao=cadastrarpaciente">Cadastrar pacientes</a></li>
-            <li><a class="dropdown-item" href="?secao=funcionariocadastrado">Paciente cadastrados</a></li>
+            <li><a class="dropdown-item" href="?secao=dadospessoais">Dados pessoais</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Vacinas
+            Cartão de vacina
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="?secao=cadastrarvacinas">Cadastrar vacinas</a></li>
-            <li><a class="dropdown-item" href="?secao=unidadecadastrada">Vacinas cadastradas</a></li>
+            <li><a class="dropdown-item" href="?secao=">Cartão de vacina</a></li>
           </ul>
         </li>
       </ul>

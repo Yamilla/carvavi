@@ -9,7 +9,7 @@ include_once("../classes/manipulaDados.php");
                 <?php
                 $busca = new manipulaDados();
                 $busca->setTable("paciente" and"vacina" and "vacinas_aplicadas");
-                $resultado = $busca->pacienteVacinado();
+                $resultado = $busca->getAllDataTable();
                 while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                 ?>
                     <article class="col-lg-3 col-md-6 col-sm-12">

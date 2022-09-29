@@ -9,7 +9,7 @@ include_once("../classes/manipulaDados.php");
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nome</th>
+                        <th>Nome do paciente</th>
                         <th>CPF</th>
                         <th>RG</th>
                         <th>SUS</th>

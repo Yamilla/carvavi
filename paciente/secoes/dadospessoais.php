@@ -31,10 +31,10 @@ include_once("../classes/manipulaDados.php");
                 </thead>
                 <tbody>
                     <?php
-                    
+                    $id_paciente=$_COOKIE['id_paciente'];
                     $busca = new manipulaDados();
                     $busca->setTable("paciente");
-                    $resultado = $busca->getAllDataTable();
+                    $resultado = $busca->getById($id_paciente);
                     while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                     ?>
                         <form method="post">

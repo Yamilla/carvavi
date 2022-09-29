@@ -84,11 +84,11 @@ class manipulaDados extends conexao
         $this->sql = "SELECT * FROM paciente WHERE usuario = '$login' and senha = '$password'";
         $this->query = self::execSQL($this->sql);
         $linhas = @mysqli_num_rows($this->qr);
-        return $linhas;
+        return $this->query;
     }
-    public function getAllByType($status)
+    public function getById($id_paciente)
     {
-        $this->sql = "SELECT * FROM $this->table WHERE status='$status'";
+        $this->sql = "SELECT * FROM $this->table WHERE id_paciente='$id_paciente'";
         $this->query = self::execSQL($this->sql);
         return $this->query;
     }
@@ -97,6 +97,12 @@ class manipulaDados extends conexao
     {
         $this->sql = "SELECT * from paciente INNER JOIN vacinas_aplicadas on paciente.id_paciente = vacinas_aplicadas.id_paciente
                     INNER JOIN vacina ON vacina.id_vacina = vacinas_aplicadas.id_vacina";
+        $this->query = self::execSQL($this->sql);
+        return $this->query;
+    }
+
+    public function vacinasAplicadas($id_paciente){
+        $this->sql = "SELECT * from vacinas_aplicadas INNER JOIN paciente on paciente.id_paciente = vacinas_aplicadas.id_paciente INNER JOIN vacina ON vacina.id_vacina = vacinas_aplicadas.id_vacina WHERE vacinas_aplicadas.id_paciente = '$id_paciente'";
         $this->query = self::execSQL($this->sql);
         return $this->query;
     }

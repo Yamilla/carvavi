@@ -57,7 +57,7 @@
           <div class="card-body border-success">
             <h5 class="card-title">Controle de vacinas</h5>
             <p class="card-text"></p>
-            <a href="?secao=vacinascadastradas" class="btn btn-success">Ir</a>
+            <a href="?secao=controledevacina" class="btn btn-success">Ir</a>
           </div>
         </div>
       </article>

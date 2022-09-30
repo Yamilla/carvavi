@@ -122,5 +122,7 @@ CREATE TABLE cartao_de_vacina (
                 FOREIGN KEY (id_vacinas_aplicadas) REFERENCES vacinas_aplicadas(id_vacinas_aplicadas)
 )ENGINE=InnoDB;
 ```
+### PARA ABRIR O SISTEMA 
 
+http://localhost/carvavi/index.php
 

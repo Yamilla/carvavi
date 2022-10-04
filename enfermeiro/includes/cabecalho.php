@@ -32,6 +32,7 @@
      
     </div>
     <a class="navbar-brand"  href="logout.php"><img src="../img/box-arrow-right.svg">Sair</a>
+    
   </div>
 </nav>
 </section>

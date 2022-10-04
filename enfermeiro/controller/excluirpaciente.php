@@ -12,9 +12,9 @@ $remove->setFieldId("id_paciente");
 $remove->setValueId($id);
 try {
     $remove->delete();
-    echo '<script>alert("O arquivo foi removido com sucesso");</script>';
+    echo '<script>alert("O Paciente foi removido com sucesso");</script>';
     echo "<script>location = '../home.php'; </script>";
 } catch (\Throwable $th) {
-    echo '<script>alert("Unidade não pode ser removida");</script>';
+    echo '<script>alert("O paciente não pode ser removido");</script>';
     echo "<script>location = '../home.php'; </script>";
 }

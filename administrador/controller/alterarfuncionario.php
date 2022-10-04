@@ -16,14 +16,12 @@ $cidade= $_POST['txtCidade'];
 $estado= $_POST['txtEstado'];
 $cep= $_POST['txtCep'];
 $cargo=$_POST['txtCargo'];
-$email= $_POST['txtEmail'];
-$usuario= $_POST['txtUsuario'];
-$senha= $_POST['txtSenha'];
 $id_unidade = $_POST['id_unidade'];
+$orgao = $_POST['txtOrgao'];
 
 $altera = new manipulaDados();
 $altera->setTable("funcionario");
-$altera->setFields("nome='$nome',cpf='$cpf',rg='$rg',telefone='$telefone',data_nascimento='$data_nascimento',rua='$rua',numero='$numero',bairro='$bairro',cidade='$cidade',estado='$estado',cep='$cep',cargo='$cargo',email='$email',usuario='$usuario',senha='$senha',id_unidade='$id_unidade'");
+$altera->setFields("nome='$nome',cpf='$cpf',rg='$rg',telefone='$telefone',data_nascimento='$data_nascimento',rua='$rua',numero='$numero',bairro='$bairro',cidade='$cidade',estado='$estado',cep='$cep',cargo='$cargo',id_unidade='$id_unidade',orgao_expedidor='$orgao'");
 $altera->setFieldId("id_funcionario");
 $altera->setValueId($id);
 $altera->update();

@@ -53,7 +53,7 @@
                                   <input type="text" name="txtNumUnidade" class="form-control" value="<?php echo $numUnidade; ?>" required />
                               </div>
                               <div class="mb-3">
-                                  <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Alterar dados</button>
+                                  <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Salvar</button>
                               </div>
                           </form>
                       </div>

@@ -42,8 +42,13 @@ $laboratorio = $_GET['laboratorio'];
                                 <label>Laboratório: </label>
                                 <input type="text" name="txtLaboratorio" class="form-control" value="<?php echo $laboratorio; ?>" required />
                             </div>
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Alterar dados</button>
+                            <div class="row justify-content-around">
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Salvar</button>
+                                </div>
+                                <div class="col-4">
+                                    <a class="btn btn-warning" href="?secao=vacinascadastradas" role="button">Cancelar</a>
+                                </div>
                             </div>
                         </form>
                     </div>

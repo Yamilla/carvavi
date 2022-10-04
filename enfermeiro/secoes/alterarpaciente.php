@@ -72,8 +72,13 @@ $cep = $_GET['cep'];
                                 <label>CEP: </label>
                                 <input type="text" name="txtCep" class="form-control" value="<?php echo $cep; ?>" required />
                             </div>
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Salvar</button>
+                            <div class="row justify-content-around">
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Salvar</button>
+                                </div>
+                                <div class="col-4">
+                                    <a class="btn btn-warning" href="?secao=pacientecadastrados" role="button">Cancelar</a>
+                                </div>
                             </div>
                         </form>
                     </div>

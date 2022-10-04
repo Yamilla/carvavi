@@ -22,6 +22,7 @@ $usuario= $_POST['txtUsuario'];
 $senha= $_POST['txtSenha'];
 
 
+
 $cadastra = new manipulaDados();
 $cadastra->setTable("paciente");
 $cadastra->setFields("nome_paciente,cpf,rg,sus,telefone,nascimento,rua,numero,bairro,cidade,estado,cep,email,usuario,senha");

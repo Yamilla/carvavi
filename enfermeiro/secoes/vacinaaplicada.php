@@ -1,6 +1,6 @@
 <?php
 include_once("../classes/manipulaDados.php");
-
+$id = $_GET['id'];
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
@@ -11,7 +11,7 @@ include_once("../classes/manipulaDados.php");
             <div class="card mt-2 mx-auto p-4 bg-light">
                 <div class="card-body bg-light">
                     <div class="container">
-                        <form method="post" enctype="multipart/form-data" action="controller/vacinaaplicadas.php">
+                        <form method="post" enctype="multipart/form-data" action="<?= "controller/vacinaaplicadas.php?id=" . $id ?>">
                         <div class="mb-3">
                                 <label for="exampleFormControlSelect1">Selecione o Nome da vacina: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="nomeVacina">
@@ -69,23 +69,7 @@ include_once("../classes/manipulaDados.php");
                                 </select>
                         </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione o paciente: </label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="paciente">
-                                <option selected>Nome do paciente</option>
-                                    <?php
-                                    $busca = new manipulaDados();
-                                    $busca->setTable("paciente");
-                                    $resultado = $busca->getAllDataTable();
-                                    while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-                                    ?>
-                                        <option value="<?= $row['id_paciente']; ?>"><?= $row['nome_paciente']; ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">vacinar</button>
+                                <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Salvar</button>
                             </div>
                         </form>
                     </div>

@@ -9,7 +9,7 @@ include_once("../classes/manipulaDados.php");
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nome do paciente</th>
+                        <th>Nome</th>
                         <th>CPF</th>
                         <th>RG</th>
                         <th>SUS</th>
@@ -63,7 +63,7 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recCep" value="<?= $row['cep']; ?>">
                                 <td><a class="btn btn-outline-warning" href="<?= "?secao=alterarpaciente&id=" . $row['id_paciente'] . "&nome=" . $row['nome_paciente'] . "&cpf=" . $row['cpf'] . "&rg=" . $row['rg'] . "&sus=" . $row['sus'] . "&data=" . $row['nascimento'] . "&telefone=" . $row['telefone'] . "&rua=" . $row['rua'] . "&numero=" . $row['numero'] . "&bairro=" . $row['bairro'] . "&cidade=" . $row['cidade'] . "&estado=" . $row['estado'] . "&cep=" . $row['cep']  ?>" role="button">Alterar</a></td>
                                 <td><a class="btn btn-outline-danger" href="<?= "controller/excluirpaciente.php?id=" . $row['id_paciente'] ?>" role="button">Excluir</a></td>
-                                <td><a class="btn btn-outline-success" href="?secao=vacinaaplicada" role="button">Vacinar</a></td>
+                                <td><a class="btn btn-outline-success" href="<?= "?secao=vacinaaplicada&id=" . $row['id_paciente'] ?>" role="button">Vacinar</a></td>
                             </tr>
                         </form>
                     <?php

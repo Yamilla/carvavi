@@ -40,9 +40,14 @@
                                 <label>Número da unidade: </label>
                                 <input type="text" name="txtNumUnidade" class="form-control" placeholder="Número da unidade" required />
                             </div>
-                            <div class="mb-3">
+                            <div class="row justify-content-around">
+                                <div class="col-4">
                                 <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Cadastrar</button>
+                                </div>
+                                <div class="col-4">
+                                <a class="btn btn-warning" href="home.php"role="button">Cancelar</a>
                             </div>
+                                </div>
                         </form>
                     </div>
                 </div>

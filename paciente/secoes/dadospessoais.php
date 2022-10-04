@@ -26,7 +26,6 @@ include_once("../classes/manipulaDados.php");
                         <th>Email</th>
                         <th>Usuário</th>
                         <th>Senha</th>
-                        <th>Funcionario</th>
                         <th>Cartão de vacina</th>
                     </tr>
                 </thead>
@@ -56,7 +55,6 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['email']; ?></td>
                                 <td><?= $row['usuario']; ?></td>
                                 <td><?= $row['senha']; ?></td>
-                                <td><?= $row['id_funcionario']; ?></td>
                                 <input type="hidden" name="recId" value="<?= $row['id_paciente']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_paciente']; ?>">
                                 <input type="hidden" name="recCpf" value="<?= $row['cpf']; ?>">
@@ -73,7 +71,6 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recEmail" value="<?= $row['email']; ?>">
                                 <input type="hidden" name="recUsuario" value="<?= $row['usuario']; ?>">
                                 <input type="hidden" name="recSenha" value="<?= $row['senha']; ?>">
-                                <input type="hidden" name="recIdfunc" value="<?= $row['id_funcionario']; ?>">
                                 <td><a class="btn btn-outline-success" href="<?="controller/gerarcartaovacina.php?id=" . $row['id_paciente'] ?>" role="button">Gerar</a></td>
                             </tr>
                         </form>

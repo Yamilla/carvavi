@@ -4,7 +4,7 @@
   <?php 
   session_start();
   $login = $_SESSION['usu'];
-  echo '<h4>Bem vindo(a), ' . $login . ' !</h4>';
+  echo '<h4>Bem vindo(a), ' . $login . '!</h4>';
   ?>
   <section>
     <h2>ACESSO RÁPIDO</h2>

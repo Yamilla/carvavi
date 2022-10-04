@@ -62,9 +62,7 @@ CREATE TABLE vacina (
                 quantidade VARCHAR (255)NOT NULL,
                 data_fabricacao DATE  NOT NULL,
                 data_validade DATE  NOT NULL,
-                laboratorio_vacina VARCHAR (255) NOT NULL,
-    			id_funcionario INTEGER NOT NULL,
-    FOREIGN KEY (id_funcionario) REFERENCES funcionario(id_funcionario))ENGINE=InnoDB;
+                laboratorio_vacina VARCHAR (255) NOT NULL)ENGINE=InnoDB;
 ```
 ### PACIENTE
 ```sql
@@ -84,9 +82,7 @@ CREATE TABLE paciente (
                 telefone VARCHAR (255) NOT NULL,
                 email VARCHAR (255) NOT NULL,
                 usuario VARCHAR (255) NOT NULL,
-                senha VARCHAR (255) NOT NULL,
-    			id_funcionario INTEGER NOT NULL,
-              FOREIGN KEY (id_funcionario) REFERENCES funcionario(id_funcionario))ENGINE=InnoDB;
+                senha VARCHAR (255) NOT NULL)ENGINE=InnoDB;
 ```
 ### VACINAS APLICADAS
 ```sql
@@ -103,25 +99,8 @@ CREATE TABLE vacinas_aplicadas (
     FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente))ENGINE=InnoDB;
 ```
 
-### CONTROLE DE VACINAS
-```sql
-CREATE TABLE controle_vacinas(
-                id_controle_vacinas INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    			id_vacina INTEGER NOT NULL,
-    			id_vacinas_aplicadas INTEGER NOT NULL,
-     FOREIGN KEY (id_vacina) REFERENCES vacina(id_vacina),
-      FOREIGN KEY (id_vacinas_aplicadas) REFERENCES vacinas_aplicadas(id_vacinas_aplicadas))ENGINE=InnoDB;
-```
-### CARTÃO DE VACINA
-```sql
-CREATE TABLE cartao_de_vacina (
-                id_cartao INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    			id_vacinas_aplicadas INTEGER NOT NULL,
-    			id_paciente INTEGER NOT NULL,
-    			FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente),
-                FOREIGN KEY (id_vacinas_aplicadas) REFERENCES vacinas_aplicadas(id_vacinas_aplicadas)
-)ENGINE=InnoDB;
-```
+
+
 ### PARA ABRIR O SISTEMA 
 
 http://localhost/carvavi/index.php

@@ -25,6 +25,10 @@ include_once("../classes/manipulaDados.php");
                                 <input type="text" name="txtRg" class="form-control" placeholder="RG" required />
                             </div>
                             <div class="mb-3">
+                                <label>Orgão expedidor: </label>
+                                <input type="text" name="txtOrgao" class="form-control" placeholder="Orgão expedidor" required />
+                            </div>
+                            <div class="mb-3">
                                 <label>Data de nascimento: </label>
                                 <input type="date" name="txtData" class="form-control" placeholder="Data de nascimento" required />
                             </div>
@@ -75,7 +79,7 @@ include_once("../classes/manipulaDados.php");
                             <div class="mb-3">
                                 <label for="exampleFormControlSelect1">Selecione a unidade que o funcionário trabalha: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="id_unidade">
-                                <option selected>Nome da unidade</option>
+                                    <option selected>Nome da unidade</option>
                                     <?php
                                     $busca = new manipulaDados();
                                     $busca->setTable("unidade_de_saude");
@@ -88,8 +92,14 @@ include_once("../classes/manipulaDados.php");
                                     ?>
                                 </select>
                             </div>
-                            <div class="mb-3">
+                            <div class="row justify-content-around">
+                                <div class="col-4">
                                 <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Cadastrar</button>
+                                </div>
+                                <div class="col-4">
+                                <a class="btn btn-warning" href="home.php"role="button">Cancelar</a>
+                            </div>
+                                </div>
                             </div>
                         </form>
                     </div>

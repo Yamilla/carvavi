@@ -20,11 +20,12 @@ $email= $_POST['txtEmail'];
 $usuario= $_POST['txtUsuario'];
 $senha= $_POST['txtSenha'];
 $id_unidade = $_POST['id_unidade'];
+$orgao = $_POST['txtOrgao'];
 
 $cadastra = new manipulaDados();
 $cadastra->setTable("funcionario");
-$cadastra->setFields("nome,cpf,rg,telefone,data_nascimento,rua,numero,bairro,cidade,estado,cep,cargo,email,usuario,senha,id_unidade");
-$cadastra->setDados("'$nome','$cpf','$rg','$telefone','$data_nascimento','$rua','$numero','$bairro','$cidade','$estado','$cep','$cargo','$email','$usuario','$senha','$id_unidade'");
+$cadastra->setFields("nome,cpf,rg,telefone,data_nascimento,rua,numero,bairro,cidade,estado,cep,cargo,email,usuario,senha,id_unidade,orgao_expedidor");
+$cadastra->setDados("'$nome','$cpf','$rg','$telefone','$data_nascimento','$rua','$numero','$bairro','$cidade','$estado','$cep','$cargo','$email','$usuario','$senha','$id_unidade','$orgao'");
 $cadastra->insert();
 
 

@@ -5,15 +5,16 @@ $id = $_GET['id'];
 $nome = $_GET['nome'];
 $cpf = $_GET['cpf'];
 $rg = $_GET['rg'];
+$orgao = $_GET['orgao'];
 $telefone = $_GET['data'];
-$data_nascimento= $_GET['telefone'];
-$rua= $_GET['rua'];
-$numero= $_GET['numero'];
-$bairro= $_GET['bairro'];
-$cidade= $_GET['cidade'];
-$estado= $_GET['estado'];
-$cep= $_GET['cep'];
-$cargo=$_GET['cargo'];
+$data_nascimento = $_GET['telefone'];
+$rua = $_GET['rua'];
+$numero = $_GET['numero'];
+$bairro = $_GET['bairro'];
+$cidade = $_GET['cidade'];
+$estado = $_GET['estado'];
+$cep = $_GET['cep'];
+$cargo = $_GET['cargo'];
 $id_unidade = $_GET['iduni'];
 
 ?>
@@ -26,10 +27,10 @@ $id_unidade = $_GET['iduni'];
             <div class="card mt-2 mx-auto p-4 bg-light">
                 <div class="card-body bg-light">
                     <div class="container">
-                        <form method="post" enctype="multipart/form-data" action="<?="controller/alterarfuncionario.php?id=".$id?>">
+                        <form method="post" enctype="multipart/form-data" action="<?= "controller/alterarfuncionario.php?id=" . $id ?>">
                             <div class="mb-3">
                                 <label>Nome do funcionário: </label>
-                                <input type="text" name="txtNome" class="form-control"  value="<?php echo $nome; ?>" required />
+                                <input type="text" name="txtNome" class="form-control" value="<?php echo $nome; ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label>CPF: </label>
@@ -38,6 +39,10 @@ $id_unidade = $_GET['iduni'];
                             <div class="mb-3">
                                 <label>RG: </label>
                                 <input type="text" name="txtRg" class="form-control" value="<?php echo $rg; ?>" required />
+                            </div>
+                            <div class="mb-3">
+                                <label>Orgão expedidor: </label>
+                                <input type="text" name="txtOrgao" class="form-control" value="<?php echo $orgao; ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label>Data de nascimento: </label>
@@ -57,7 +62,7 @@ $id_unidade = $_GET['iduni'];
                             </div>
                             <div class="mb-3">
                                 <label>Bairro: </label>
-                                <input type="text" name="txtBairro" class="form-control"value="<?php echo $bairro; ?>" required />
+                                <input type="text" name="txtBairro" class="form-control" value="<?php echo $bairro; ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label>Cidade: </label>
@@ -92,7 +97,7 @@ $id_unidade = $_GET['iduni'];
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Alterar dados</button>
+                                <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Salvar</button>
                             </div>
                         </form>
                     </div>

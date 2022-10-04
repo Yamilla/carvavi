@@ -20,12 +20,12 @@ $cep= $_POST['txtCep'];
 $email= $_POST['txtEmail'];
 $usuario= $_POST['txtUsuario'];
 $senha= $_POST['txtSenha'];
-$id_funcionario = $_POST['id_funcionario'];
+
 
 $cadastra = new manipulaDados();
 $cadastra->setTable("paciente");
-$cadastra->setFields("nome_paciente,cpf,rg,sus,telefone,nascimento,rua,numero,bairro,cidade,estado,cep,email,usuario,senha,id_funcionario");
-$cadastra->setDados("'$nome','$cpf','$sus','$rg','$telefone','$data_nascimento','$rua','$numero','$bairro','$cidade','$estado','$cep','$email','$usuario','$senha','$id_funcionario'");
+$cadastra->setFields("nome_paciente,cpf,rg,sus,telefone,nascimento,rua,numero,bairro,cidade,estado,cep,email,usuario,senha");
+$cadastra->setDados("'$nome','$cpf','$sus','$rg','$telefone','$data_nascimento','$rua','$numero','$bairro','$cidade','$estado','$cep','$email','$usuario','$senha'");
 $cadastra->insert();
 mkdir(CAMINHO_CARTAOVACINAS . $nome, 0777);
 

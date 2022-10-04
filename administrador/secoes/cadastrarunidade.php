@@ -13,10 +13,6 @@
                                 <input type="text" name="txtNomeuni" class="form-control" placeholder="Nome da unidade" required/>
                             </div>
                             <div class="mb-3">
-                                <label>Nome da Unidade: </label>
-                                <input type="text" name="txtNomeuni" class="form-control" placeholder="Nome da unidade" required/>
-                            </div>
-                            <div class="mb-3">
                                 <label>Rua: </label>
                                 <input type="text" name="txtRua" class="form-control" placeholder="Rua" required />
                             </div>

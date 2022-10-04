@@ -17,11 +17,11 @@ $bairro= $_POST['txtBairro'];
 $cidade= $_POST['txtCidade'];
 $estado= $_POST['txtEstado'];
 $cep= $_POST['txtCep'];
-$id_funcionario = $_POST['id_funcionario'];
+
 
 $altera = new manipulaDados();
 $altera->setTable("paciente");
-$altera->setFields("nome_paciente='$nome',cpf='$cpf ',rg='$rg ',sus='$sus',nascimento='$data_nascimento',rua='$rua',numero='$numero',bairro='$bairro',cidade='$cidade',estado='$estado',cep='$cep',telefone='$telefone',id_funcionario='$id_funcionario'");
+$altera->setFields("nome_paciente='$nome',cpf='$cpf ',rg='$rg ',sus='$sus',nascimento='$data_nascimento',rua='$rua',numero='$numero',bairro='$bairro',cidade='$cidade',estado='$estado',cep='$cep',telefone='$telefone'");
 $altera->setFieldId("id_paciente");
 $altera->setValueId($id);
 $altera->update();

@@ -37,22 +37,6 @@ include_once("../classes/manipulaDados.php");
                                 <input type="text" name="txtLaboratorio" class="form-control" placeholder="Laboratório" required />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione o funcionário: </label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="id_funcionario">
-                                <option selected>Nome do funcionário</option>
-                                    <?php
-                                    $busca = new manipulaDados();
-                                    $busca->setTable("funcionario");
-                                    $resultado = $busca->getAllDataTable();
-                                    while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-                                    ?>
-                                        <option value="<?= $row['id_funcionario']; ?>"><?= $row['nome']; ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="mb-3">
                                 <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Cadastrar</button>
                             </div>
                         </form>

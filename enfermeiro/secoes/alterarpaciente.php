@@ -13,7 +13,6 @@ $bairro = $_GET['bairro'];
 $cidade = $_GET['cidade'];
 $estado = $_GET['estado'];
 $cep = $_GET['cep'];
-$id_funcionario = $_GET['idfunc'];
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
@@ -74,23 +73,7 @@ $id_funcionario = $_GET['idfunc'];
                                 <input type="text" name="txtCep" class="form-control" value="<?php echo $cep; ?>" required />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione o funcionario: </label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="id_funcionario">
-                                    <option selected>Nome do funcionario</option>
-                                    <?php
-                                    $busca = new manipulaDados();
-                                    $busca->setTable("funcionario");
-                                    $resultado = $busca->getAllDataTable();
-                                    while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-                                    ?>
-                                        <option value="<?= $row['id_funcionario']; ?>"><?= $row['nome']; ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Alterar dados</button>
+                                <button type="submit" class="btn btn-success btn-send  pt-2 btn-block">Salvar</button>
                             </div>
                         </form>
                     </div>

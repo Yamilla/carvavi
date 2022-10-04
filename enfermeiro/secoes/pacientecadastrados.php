@@ -21,7 +21,6 @@ include_once("../classes/manipulaDados.php");
                         <th>Cidade</th>
                         <th>Estado</th>
                         <th>CEP</th>
-                        <th>funcionário</th>
                         <th>ALTERAR </th>
                         <th>EXCLUIR </th>
                         <th>VACINAR</th>
@@ -49,7 +48,6 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['cidade']; ?></td>
                                 <td><?= $row['estado']; ?></td>
                                 <td><?= $row['cep']; ?></td>
-                                <td><?= $row['id_funcionario']; ?></td>
                                 <input type="hidden" name="recId" value="<?= $row['id_paciente']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_paciente']; ?>">
                                 <input type="hidden" name="recCpf" value="<?= $row['cpf']; ?>">
@@ -63,8 +61,7 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recCidade" value="<?= $row['cidade']; ?>">
                                 <input type="hidden" name="recEstado" value="<?= $row['estado']; ?>">
                                 <input type="hidden" name="recCep" value="<?= $row['cep']; ?>">
-                                <input type="hidden" name="recIdfunc" value="<?= $row['id_funcionario']; ?>">
-                                <td><a class="btn btn-outline-warning" href="<?= "?secao=alterarpaciente&id=" . $row['id_paciente'] . "&nome=" . $row['nome_paciente'] . "&cpf=" . $row['cpf'] . "&rg=" . $row['rg'] . "&sus=" . $row['sus'] . "&data=" . $row['nascimento'] . "&telefone=" . $row['telefone'] . "&rua=" . $row['rua'] . "&numero=" . $row['numero'] . "&bairro=" . $row['bairro'] . "&cidade=" . $row['cidade'] . "&estado=" . $row['estado'] . "&cep=" . $row['cep'] . "&idfunc=" . $row['id_funcionario'] ?>" role="button">Alterar</a></td>
+                                <td><a class="btn btn-outline-warning" href="<?= "?secao=alterarpaciente&id=" . $row['id_paciente'] . "&nome=" . $row['nome_paciente'] . "&cpf=" . $row['cpf'] . "&rg=" . $row['rg'] . "&sus=" . $row['sus'] . "&data=" . $row['nascimento'] . "&telefone=" . $row['telefone'] . "&rua=" . $row['rua'] . "&numero=" . $row['numero'] . "&bairro=" . $row['bairro'] . "&cidade=" . $row['cidade'] . "&estado=" . $row['estado'] . "&cep=" . $row['cep']  ?>" role="button">Alterar</a></td>
                                 <td><a class="btn btn-outline-danger" href="<?= "controller/excluirpaciente.php?id=" . $row['id_paciente'] ?>" role="button">Excluir</a></td>
                                 <td><a class="btn btn-outline-success" href="?secao=vacinaaplicada" role="button">Vacinar</a></td>
                             </tr>

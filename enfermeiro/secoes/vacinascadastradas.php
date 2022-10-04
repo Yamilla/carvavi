@@ -16,7 +16,6 @@ include_once("../classes/manipulaDados.php");
                         <th>Data de fabricação</th>
                         <th>Data de validade</th>
                         <th>laboratório</th>
-                        <th>funcionário</th>
                         <th>ALTERAR </th>
                         <th>EXCLUIR </th>
                     </tr>
@@ -37,7 +36,6 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['data_fabricacao']; ?></td>
                                 <td><?= $row['data_validade']; ?></td>
                                 <td><?= $row['laboratorio_vacina']; ?></td>
-                                <td><?= $row['id_funcionario']; ?></td>
                                 <input type="hidden" name="recId" value="<?= $row['id_vacina']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_vacina']; ?>">
                                 <input type="hidden" name="recLote" value="<?= $row['lote_vacina']; ?>">
@@ -45,8 +43,7 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recFabricacao" value="<?= $row['data_fabricacao']; ?>">
                                 <input type="hidden" name="recValidade" value="<?= $row['data_validade']; ?>">
                                 <input type="hidden" name="recLaboratorio" value="<?= $row['laboratorio_vacina']; ?>">
-                                <input type="hidden" name="recIdfunc" value="<?= $row['id_funcionario']; ?>">
-                                <td><a class="btn btn-outline-warning" href="<?="?secao=alterarvacina&id=".$row['id_vacina']. "&nome=".$row['nome_vacina']."&lote=".$row['lote_vacina']. "&quantidade=".$row['quantidade']."&fabricacao=".$row['data_fabricacao']. "&validade=".$row['data_validade']. "&laboratorio=".$row['laboratorio_vacina']."&idfunc=".$row['id_funcionario']?>" role="button">Alterar</a></td>
+                                <td><a class="btn btn-outline-warning" href="<?="?secao=alterarvacina&id=".$row['id_vacina']. "&nome=".$row['nome_vacina']."&lote=".$row['lote_vacina']. "&quantidade=".$row['quantidade']."&fabricacao=".$row['data_fabricacao']. "&validade=".$row['data_validade']. "&laboratorio=".$row['laboratorio_vacina'] ?>" role="button">Alterar</a></td>
                                 <td><a class="btn btn-outline-danger" href="<?="controller/excluirvacina.php?id=".$row['id_vacina']?>" role="button">Excluir</a></td>
                             </tr>
                         </form>

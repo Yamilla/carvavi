@@ -24,6 +24,10 @@ include_once("../classes/manipulaDados.php");
                                 <input type="text" name="txtRg" class="form-control" placeholder="RG" required />
                             </div>
                             <div class="mb-3">
+                                <label>Orgão expedidor: </label>
+                                <input type="text" name="txtOrgao" class="form-control" placeholder="Orgão expedidor" required />
+                            </div>
+                            <div class="mb-3">
                                 <label>SUS: </label>
                                 <input type="text" name="txtSus" class="form-control" placeholder="SUS" required />
                             </div>

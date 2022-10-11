@@ -22,7 +22,7 @@
                         <h2 class="subtitle text-start mb-3">Administrador</h2>
                         <form action="controller/loginadmin.php" method="post">
                             <div class="form-group">
-                                <input name="txtUsuario" type="text" class="form-control" placeholder="Usuario" required />
+                                <input name="txtUsuario" type="text" class="form-control" placeholder="Usuário" required />
                             </div>
                             <div class="form-group mt-3">
                                 <input name="txtSenha" type="password" class="form-control" placeholder="Senha" required />
@@ -37,7 +37,7 @@
                         <h2 class="subtitle text-start mb-3">Técnico de enfermagem</h2>
                         <form action="controller/loginfunc.php" method="post">
                             <div class="form-group">
-                                <input name="txtUsuariofunc" type="text" class="form-control" placeholder="Usuario" required />
+                                <input name="txtUsuariofunc" type="text" class="form-control" placeholder="Usuário" required />
                             </div>
                             <div class="form-group mt-3">
                                 <input name="txtSenhafunc" type="password" class="form-control" placeholder="Senha" required />
@@ -52,7 +52,7 @@
                         <h2 class="subtitle text-start mb-3">Paciente</h2>
                         <form action="controller/loginpaciente.php" method="post">
                             <div class="form-group">
-                                <input name="txtUsuario" type="text" class="form-control" placeholder="Usuario" required />
+                                <input name="txtUsuario" type="text" class="form-control" placeholder="Usuário" required />
                             </div>
                             <div class="form-group mt-3">
                                 <input name="txtSenha" type="password" class="form-control" placeholder="Senha" required />

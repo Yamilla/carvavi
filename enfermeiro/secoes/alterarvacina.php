@@ -19,7 +19,7 @@ $laboratorio = $_GET['laboratorio'];
                     <div class="container">
                         <form method="post" enctype="multipart/form-data" action="<?="controller/alterarvacina.php?id=".$id?>">
                             <div class="mb-3">
-                                <label>Nome da vacina:</label>
+                                <label>Nome:</label>
                                 <input type="text" name="txtNomevac" class="form-control" value="<?php echo $nome; ?>" required />
                             </div>
                             <div class="mb-3">

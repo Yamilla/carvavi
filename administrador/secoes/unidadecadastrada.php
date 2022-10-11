@@ -10,7 +10,7 @@ include_once("../classes/manipulaDados.php");
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nome da unidade</th>
+                        <th>Nome</th>
                         <th>Rua</th>
                         <th>Número</th>
                         <th>Bairro</th>

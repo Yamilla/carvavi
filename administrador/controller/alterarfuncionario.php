@@ -21,7 +21,7 @@ $orgao = $_POST['txtOrgao'];
 
 $altera = new manipulaDados();
 $altera->setTable("funcionario");
-$altera->setFields("nome='$nome',cpf='$cpf',rg='$rg',telefone='$telefone',data_nascimento='$data_nascimento',rua='$rua',numero='$numero',bairro='$bairro',cidade='$cidade',estado='$estado',cep='$cep',cargo='$cargo',id_unidade='$id_unidade',orgao_expedidor='$orgao'");
+$altera->setFields("nome='$nome',cpf='$cpf',rg='$rg',data_nascimento='$data_nascimento',telefone='$telefone',rua='$rua',numero='$numero',bairro='$bairro',cidade='$cidade',estado='$estado',cep='$cep',cargo='$cargo',id_unidade='$id_unidade',orgao_expedidor='$orgao'");
 $altera->setFieldId("id_funcionario");
 $altera->setValueId($id);
 $altera->update();

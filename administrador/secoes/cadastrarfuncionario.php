@@ -13,8 +13,8 @@ include_once("../classes/manipulaDados.php");
                     <div class="container">
                         <form method="post" enctype="multipart/form-data" action="controller/cadastrarfuncionario.php">
                             <div class="mb-3">
-                                <label>Nome do funcionário: </label>
-                                <input type="text" name="txtNome" class="form-control" placeholder="Nome do funcionário" required />
+                                <label>Nome: </label>
+                                <input type="text" name="txtNome" class="form-control" placeholder="Nome" required />
                             </div>
                             <div class="mb-3">
                                 <label>CPF: </label>
@@ -108,3 +108,4 @@ include_once("../classes/manipulaDados.php");
         </div>
     </div>
 </div>
+

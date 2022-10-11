@@ -13,6 +13,7 @@ $bairro = $_GET['bairro'];
 $cidade = $_GET['cidade'];
 $estado = $_GET['estado'];
 $cep = $_GET['cep'];
+$orgao = $_GET['orgao'];
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
@@ -25,7 +26,7 @@ $cep = $_GET['cep'];
                     <div class="container">
                         <form method="post" enctype="multipart/form-data" action="<?= "controller/alterarpaciente.php?id=" . $id ?>">
                             <div class="mb-3">
-                                <label>Nome do paciente: </label>
+                                <label>Nome: </label>
                                 <input type="text" name="txtNome" class="form-control" value="<?php echo $nome; ?>" required />
                             </div>
                             <div class="mb-3">
@@ -35,6 +36,10 @@ $cep = $_GET['cep'];
                             <div class="mb-3">
                                 <label>RG: </label>
                                 <input type="text" name="txtRg" class="form-control" value="<?php echo $rg; ?>" required />
+                            </div>
+                            <div class="mb-3">
+                                <label>Orgão expedidor: </label>
+                                <input type="text" name="txtOrgao" class="form-control" value="<?php echo $orgao; ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label>SUS: </label>

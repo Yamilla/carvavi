@@ -9,8 +9,8 @@
                     <div class="container">
                         <form method="post" enctype="multipart/form-data" action="controller/cadastrarunidade.php">
                             <div class="mb-3">
-                                <label>Nome da Unidade: </label>
-                                <input type="text" name="txtNomeuni" class="form-control" placeholder="Nome da unidade" required/>
+                                <label>Nome: </label>
+                                <input type="text" name="txtNomeuni" class="form-control" placeholder="Nome" required/>
                             </div>
                             <div class="mb-3">
                                 <label>Rua: </label>

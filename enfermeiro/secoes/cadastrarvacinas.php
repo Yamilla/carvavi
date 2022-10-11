@@ -13,7 +13,7 @@ include_once("../classes/manipulaDados.php");
                     <div class="container">
                         <form method="post" enctype="multipart/form-data" action="controller/cadastrarvacina.php">
                             <div class="mb-3">
-                                <label>Nome da vacina: </label>
+                                <label>Nome: </label>
                                 <input type="text" name="txtNomevac" class="form-control" placeholder="Nome da vacina" required />
                             </div>
                             <div class="mb-3">

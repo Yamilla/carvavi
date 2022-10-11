@@ -21,7 +21,7 @@
                       <div class="container">
                           <form method="post" enctype="multipart/form-data" action="<?="controller/alterarunidade.php?id=".$id ?>">
                               <div class="mb-3">
-                                  <label>Nome da Unidade: </label>
+                                  <label>Nome: </label>
                                   <input type="text" name="txtNomeuni" class="form-control" value="<?php echo $nomeuni; ?>" required />
                               </div>
                               <div class="mb-3">

@@ -1,7 +1,6 @@
 <?php
 include_once("../classes/manipulaDados.php");
 $id = $_GET['id'];
-$nome = $_GET['nome'];
 $lote = $_GET['lote'];
 $quantidade = $_GET['quantidade'];
 $fabricacao = $_GET['fabricacao'];
@@ -10,7 +9,7 @@ $laboratorio = $_GET['laboratorio'];
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
-        <h1>Alterar vacina cadastradas</h1>
+        <h1>Alterar vacina cadastrada</h1>
     </div>
     <div class="row ">
         <div class="col-lg-7 mx-auto">
@@ -18,10 +17,6 @@ $laboratorio = $_GET['laboratorio'];
                 <div class="card-body bg-light">
                     <div class="container">
                         <form method="post" enctype="multipart/form-data" action="<?="controller/alterarvacina.php?id=".$id?>">
-                            <div class="mb-3">
-                                <label>Nome:</label>
-                                <input type="text" name="txtNomevac" class="form-control" value="<?php echo $nome; ?>" required />
-                            </div>
                             <div class="mb-3">
                                 <label>lote:</label>
                                 <input type="text" name="txtLote" class="form-control" value="<?php echo $lote; ?>" required />

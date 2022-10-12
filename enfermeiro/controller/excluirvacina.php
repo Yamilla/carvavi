@@ -7,8 +7,8 @@ function converte($String)
 
 $id = $_GET['id'];
 $remove = new manipulaDados();
-$remove->setTable("vacina");
-$remove->setFieldId("id_vacina");
+$remove->setTable("descricao_vacina");
+$remove->setFieldId("id_descicao_vacina");
 $remove->setValueId($id);
 try {
     $remove->delete();

@@ -4,7 +4,7 @@ $id = $_GET['id'];
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
-        <h1>Vacinas aplicadas</h1>
+        <h1>Vacinar</h1>
     </div>
     <div class="row ">
         <div class="col-lg-7 mx-auto">
@@ -31,14 +31,14 @@ $id = $_GET['id'];
                         <div class="mb-3">
                                 <label for="exampleFormControlSelect1">Selecione o lote: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="lote">
-                                <option selected>Nome da vacina</option>
+                                <option selected>lote</option>
                                     <?php
                                     $busca = new manipulaDados();
-                                    $busca->setTable("vacina");
+                                    $busca->setTable("descricao_vacina");
                                     $resultado = $busca->getAllDataTable();
                                     while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                                     ?>
-                                        <option value="<?= $row['id_vacina']; ?>"><?= $row['lote_vacina']; ?></option>
+                                        <option value="<?= $row['id_descricao_vacina']; ?>"><?= $row['lote']; ?></option>
                                     <?php
                                     }
                                     ?>
@@ -58,11 +58,27 @@ $id = $_GET['id'];
                                 <option selected>Nome do laboratorio</option>
                                     <?php
                                     $busca = new manipulaDados();
-                                    $busca->setTable("vacina");
+                                    $busca->setTable("descricao_vacina");
                                     $resultado = $busca->getAllDataTable();
                                     while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                                     ?>
-                                        <option value="<?= $row['id_vacina']; ?>"><?= $row['laboratorio_vacina']; ?></option>
+                                        <option value="<?= $row['id_descricao_vacina']; ?>"><?= $row['laboratorio']; ?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
+                        </div>
+                        <div class="mb-3">
+                                <label for="exampleFormControlSelect1">Selecione o funcionario que vacinou: </label>
+                                <select class="form-control" id="exampleFormControlSelect1" name="func">
+                                <option selected>Nome do laboratorio</option>
+                                    <?php
+                                    $busca = new manipulaDados();
+                                    $busca->setTable("funcionario");
+                                    $resultado = $busca->getAllDataTable();
+                                    while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+                                    ?>
+                                        <option value="<?= $row['id_funcionario']; ?>"><?= $row['nome']; ?></option>
                                     <?php
                                     }
                                     ?>

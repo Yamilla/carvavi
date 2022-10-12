@@ -9,15 +9,14 @@ $lote = $_POST['lote'];
 $aplicacao = $_POST['txtDataaplic'];
 $dose = $_POST['txtDose'];
 $laboaratorio = $_POST['laboratorio'];
-
+$funcionario=$_POST['func'];
 
 
 $cadastra = new manipulaDados();
 $cadastra->setTable("vacinas_aplicadas");
-$cadastra->setFields("id_paciente,nome,lote,data_aplicacao,dose,laboratorio,id_vacina");
-$cadastra->setDados("'$id','$nome','$lote','$aplicacao ','$dose ','$laboaratorio','$nome'");
+$cadastra->setFields("id_vacina,id_descricao_vacina,id_paciente,id_funcionario,nome,lote,data_aplicacao,dose,laboratorio");
+$cadastra->setDados("'$nome','$lote','$id','$funcionario','$nome','$lote','$aplicacao ','$dose ','$laboaratorio'");
 $cadastra->insert();
-
 
 echo '<script>alert("'.$cadastra->getStatus().'");</script>';
 echo "<script>location = '../home.php'; </script>";

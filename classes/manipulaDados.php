@@ -94,7 +94,11 @@ class manipulaDados extends conexao
     }
 
     public function vacinasAplicadas($id_paciente){
-        $this->sql = "SELECT * from vacinas_aplicadas INNER JOIN paciente on paciente.id_paciente = vacinas_aplicadas.id_paciente INNER JOIN vacina ON vacina.id_vacina = vacinas_aplicadas.id_vacina WHERE vacinas_aplicadas.id_paciente = '$id_paciente'";
+        $this->sql = "SELECT * from vacinas_aplicadas
+        INNER JOIN paciente on paciente.id_paciente = vacinas_aplicadas.id_paciente 
+        INNER JOIN descricao_vacina ON descricao_vacina.id_descricao_vacina = vacinas_aplicadas.id_descricao_vacina
+        INNER JOIN vacina ON vacina.id_vacina = descricao_vacina.id_vacina
+        WHERE vacinas_aplicadas.id_paciente = '$id_paciente'";
         $this->query = self::execSQL($this->sql);
         return $this->query;
     }
@@ -105,6 +109,12 @@ class manipulaDados extends conexao
         inner join funcionario on paciente.id_funcionario = funcionario.id_funcionario
         inner join unidade_de_saude on funcionario.id_unidade = unidade_de_saude.id_unidade
         WHERE vacinas_aplicadas.id_paciente = '$id_paciente'";
+        $this->query = self::execSQL($this->sql);
+        return $this->query;
+    }
+
+    public function visualizarVacina($id_vacina){
+        $this->sql = "SELECT * from descricao_vacina INNER JOIN vacina on vacina.id_vacina = descricao_vacina.id_vacina WHERE  descricao_vacina.id_vacina = '$id_vacina'";
         $this->query = self::execSQL($this->sql);
         return $this->query;
     }

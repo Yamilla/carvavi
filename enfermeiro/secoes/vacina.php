@@ -1,37 +1,35 @@
 <?php
 include_once("../classes/manipulaDados.php");
-$id_paciente = $_GET['id'];
 ?>
 
 <div class="container">
     <div class=" text-center mt-5 ">
-        <h1>Vacinas aplicadas</h1>
+        <h1>Vacinas</h1>
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Vacina</th>
-                        <th></th>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Incluir Vacinas</th>
+                        <th>Ver</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-
-                    $id_paciente = $_GET['id'];
                     $busca = new manipulaDados();
-                    $busca->setTable("vacina" and "descricao_vacina" and "vacinas_aplicadas");
-                    $resultado = $busca->vacinasAplicadas($id_paciente);
+                    $busca->setTable("vacina");
+                    $resultado = $busca->getAllDataTable();
                     while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                     ?>
-                        <form method="post" action="<?= "?id=" . $id_paciente ?>">
+                        <form method="post">
                             <tr>
-                                <td><?= $row['id_vacinas_aplicadas']; ?></td>
+                                <td><?= $row['id_vacina']; ?></td>
                                 <td><?= $row['nome_vacina']; ?></td>
-
-                                <input type="hidden" name="recId" value="<?= $row['id_vacinas_aplicadas']; ?>">
+                                <input type="hidden" name="recId" value="<?= $row['id_vacina']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_vacina']; ?>">
-
+                                <td><a class="btn btn-outline-success" href="<?= "?secao=descricaovacina&id=" . $row['id_vacina'] ?>">Incluir vacinas</a></td>
+                                <td><a class="btn btn-outline-warning" href="<?= "?secao=visualizarvacinas&id=" . $row['id_vacina'] ?>">Visualizar</a></td>
                             </tr>
                         </form>
                     <?php

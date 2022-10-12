@@ -23,8 +23,8 @@
             Vacinas
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="?secao=cadastrarvacinas">Cadastrar vacinas</a></li>
-            <li><a class="dropdown-item" href="?secao=vacinascadastradas">Vacinas cadastradas</a></li>
+            <li><a class="dropdown-item" href="?secao=cadastrovacina">Cadastrar vacinas</a></li>
+            <li><a class="dropdown-item" href="?secao=vacina">Vacinas cadastradas</a></li>
             <li><a class="dropdown-item" href="?secao=controledevacina">Controle de vacinas</a></li>
           </ul>
         </li>

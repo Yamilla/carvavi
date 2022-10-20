@@ -57,12 +57,7 @@ CREATE TABLE funcionario (
 ```sql
 CREATE TABLE vacina (
                 id_vacina INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-                nome_vacina VARCHAR (255) NOT NULL,
-                lote_vacina VARCHAR (255) NOT NULL,
-                quantidade VARCHAR (255)NOT NULL,
-                data_fabricacao DATE  NOT NULL,
-                data_validade DATE  NOT NULL,
-                laboratorio_vacina VARCHAR (255) NOT NULL)ENGINE=InnoDB;
+                nome_vacina VARCHAR (255) NOT NULL ;
 ```
 ### PACIENTE
 ```sql
@@ -97,6 +92,18 @@ CREATE TABLE vacinas_aplicadas (
                 laboratorio VARCHAR (255) NOT NULL,
     FOREIGN KEY (id_vacina) REFERENCES vacina(id_vacina),
     FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente))ENGINE=InnoDB;
+```
+### DESCRIÇÃO DA VACINA
+```sql
+    CREATE TABLE descricao (
+                id_descricao INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+                id_vacina INTEGER NOT NULL,
+                lote VARCHAR (255) NOT NULL,
+                quantidade VARCHAR (255)NOT NULL,
+                data_fabricacao DATE  NOT NULL,
+                data_validade DATE  NOT NULL,
+                laboratorio VARCHAR (255) NOT NULL,
+                FOREIGN KEY (id_vacina) REFERENCES vacina(id_vacina))ENGINE=InnoDB;
 ```
 
 

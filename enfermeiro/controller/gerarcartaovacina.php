@@ -15,7 +15,7 @@ while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
   $pdf->SetFont('Arial', 'b', 10);
   $pdf->Cell(820, 230, utf8_decode($row['sus']), 0, 0, 'C');
   $pdf->ln(160);
-  $pdf->Cell(140, 10, utf8_decode($row['nome_paciente']), 0, 0, 'C');
+  $pdf->Cell(190, 10, utf8_decode($row['nome_paciente']), 0, 0, 'C');
   $pdf->ln(25);
   $pdf->Cell(120, 10, utf8_decode($row['cpf']), 0, 0, 'C');
   $pdf->Cell(215, 5, utf8_decode($row['rg']), 0, 0, 'C');

@@ -14,7 +14,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="?secao=cadastrarpaciente">Cadastrar pacientes</a></li>
             <li><a class="dropdown-item" href="?secao=pacientecadastrados">Paciente cadastrados</a></li>
-            <li><a class="dropdown-item" href="?secao=funcionariocadastrado">Cartão de vacina</a></li>
+            <li><a class="dropdown-item" href="?secao=cartaovacina">Cartão de vacina</a></li>
           </ul>
         </li>
 

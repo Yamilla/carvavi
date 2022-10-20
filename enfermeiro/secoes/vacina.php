@@ -28,7 +28,7 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['nome_vacina']; ?></td>
                                 <input type="hidden" name="recId" value="<?= $row['id_vacina']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_vacina']; ?>">
-                                <td><a class="btn btn-outline-success" href="<?= "?secao=descricaovacina&id=" . $row['id_vacina'] ?>">Incluir vacinas</a></td>
+                                <td><a class="btn btn-outline-success" href="<?= "?secao=descricaovacina&id=" . $row['id_vacina'] ?>">Incluir dados da vacina</a></td>
                                 <td><a class="btn btn-outline-warning" href="<?= "?secao=visualizarvacinas&id=" . $row['id_vacina'] ?>">Visualizar</a></td>
                             </tr>
                         </form>

@@ -10,7 +10,6 @@ $id_vacina = $_GET['id'];
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Lote</th>
                         <th>Quantidade</th>
                         <th>Data de fabricação</th>
@@ -31,13 +30,11 @@ $id_vacina = $_GET['id'];
                     ?>
                         <form method="post" action="<?= "?id=" . $id_vacina ?>">
                             <tr>
-                                <td><?= $row['id_descricao_vacina']; ?></td>
                                 <td><?= $row['lote']; ?></td>
                                 <td><?= $row['quantidade']; ?></td>
                                 <td><?= $row['data_fabricacao']; ?></td>
                                 <td><?= $row['data_validade']; ?></td>
                                 <td><?= $row['laboratorio']; ?></td>
-                                <input type="hidden" name="recId" value="<?= $row['id_descricao_vacina']; ?>">
                                 <input type="hidden" name="recLote" value="<?= $row['lote']; ?>">
                                 <input type="hidden" name="recQuantidade" value="<?= $row['quantidade']; ?>">
                                 <input type="hidden" name="recFabricacao" value="<?= $row['data_fabricacao']; ?>">

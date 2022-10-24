@@ -12,9 +12,9 @@ $remove->setFieldId("id_unidade");
 $remove->setValueId($id);
 try {
     $remove->delete();
-    echo '<script>alert("O arquivo foi removido com sucesso");</script>';
+    echo '<script>alert("Unidade foi removida com sucesso!");</script>';
     echo "<script>location = '../home.php'; </script>";
 } catch (\Throwable $th) {
-    echo '<script>alert("Unidade não pode ser removida");</script>';
+    echo '<script>alert("Unidade não pode ser removida por está sendo usada em outra área do sistema!");</script>';
     echo "<script>location = '../home.php'; </script>";
 }

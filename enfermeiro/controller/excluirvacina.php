@@ -15,6 +15,6 @@ try {
     echo '<script>alert("A vacina foi removida com sucesso");</script>';
     echo "<script>location = '../home.php'; </script>";
 } catch (\Throwable $th) {
-    echo '<script>alert("A vacina não pode ser removida");</script>';
+    echo '<script>alert("A vacina não pode ser removida por está sendo usada em outra área do sistema!");</script>';
     echo "<script>location = '../home.php'; </script>";
 }

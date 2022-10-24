@@ -14,6 +14,6 @@ try {
     echo '<script>alert("O funcionário foi removido com sucesso");</script>';
     echo "<script>location = '../home.php'; </script>";
 } catch (\Throwable $th) {
-    echo '<script>alert("O funcionário não pode ser removida");</script>';
+    echo '<script>alert("O funcionário não pode ser removido por está sendo usado em outra área do sistema!");</script>';
     echo "<script>location = '../home.php'; </script>";
 }

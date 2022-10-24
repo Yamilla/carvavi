@@ -9,7 +9,6 @@ include_once("../classes/manipulaDados.php");
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Nome</th>
                         <th>Incluir Vacinas</th>
                         <th>Ver</th>
@@ -24,7 +23,6 @@ include_once("../classes/manipulaDados.php");
                     ?>
                         <form method="post">
                             <tr>
-                                <td><?= $row['id_vacina']; ?></td>
                                 <td><?= $row['nome_vacina']; ?></td>
                                 <input type="hidden" name="recId" value="<?= $row['id_vacina']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_vacina']; ?>">

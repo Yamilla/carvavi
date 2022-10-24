@@ -15,6 +15,6 @@ try {
     echo '<script>alert("O Paciente foi removido com sucesso");</script>';
     echo "<script>location = '../home.php'; </script>";
 } catch (\Throwable $th) {
-    echo '<script>alert("O paciente não pode ser removido");</script>';
+    echo '<script>alert("O paciente não pode ser removido por está sendo usado em outra área do sistema!");</script>';
     echo "<script>location = '../home.php'; </script>";
 }

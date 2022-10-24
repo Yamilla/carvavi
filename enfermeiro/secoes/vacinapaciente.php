@@ -10,9 +10,7 @@ $id_paciente = $_GET['id'];
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Vacina</th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,7 +24,6 @@ $id_paciente = $_GET['id'];
                     ?>
                         <form method="post" action="<?= "?id=" . $id_paciente ?>">
                             <tr>
-                                <td><?= $row['id_vacinas_aplicadas']; ?></td>
                                 <td><?= $row['nome_vacina']; ?></td>
 
                                 <input type="hidden" name="recId" value="<?= $row['id_vacinas_aplicadas']; ?>">

@@ -10,7 +10,6 @@ include_once("../classes/manipulaDados.php");
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Nome</th>
                         <th>CPF</th>
                         <th>RG</th>
@@ -39,7 +38,6 @@ include_once("../classes/manipulaDados.php");
                     ?>
                         <form method="post">
                             <tr>
-                                <td><?= $row['id_paciente']; ?></td>
                                 <td><?= $row['nome_paciente']; ?></td>
                                 <td><?= $row['cpf']; ?></td>
                                 <td><?= $row['rg']; ?></td>
@@ -55,7 +53,6 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['email']; ?></td>
                                 <td><?= $row['usuario']; ?></td>
                                 <td><?= $row['senha']; ?></td>
-                                <input type="hidden" name="recId" value="<?= $row['id_paciente']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_paciente']; ?>">
                                 <input type="hidden" name="recCpf" value="<?= $row['cpf']; ?>">
                                 <input type="hidden" name="recRg" value="<?= $row['rg']; ?>">

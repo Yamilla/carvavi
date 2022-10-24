@@ -9,7 +9,6 @@ include_once("../classes/manipulaDados.php");
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Nome</th>
                         <th>Rua</th>
                         <th>Número</th>
@@ -31,7 +30,6 @@ include_once("../classes/manipulaDados.php");
                     ?>
                         <form method="post">
                             <tr>
-                                <td><?= $row['id_unidade']; ?></td>
                                 <td><?= $row['nome_unidade']; ?></td>
                                 <td><?= $row['rua']; ?></td>
                                 <td><?= $row['numero']; ?></td>
@@ -40,7 +38,6 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['estado']; ?></td>
                                 <td><?= $row['cep']; ?></td>
                                 <td><?= $row['numero_unidade']; ?></td>
-                                <input type="hidden" name="recId" value="<?= $row['id_unidade']; ?>">
                                 <input type="hidden" name="recNome" value="<?= $row['nome_unidade']; ?>">
                                 <input type="hidden" name="recRua" value="<?= $row['rua']; ?>">
                                 <input type="hidden" name="recNumero" value="<?= $row['numero']; ?>">

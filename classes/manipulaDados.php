@@ -120,4 +120,9 @@ class manipulaDados extends conexao
         return $this->query;
     }
    
+    public function updateQuantidade()
+    {
+        $this->sql = "UPDATE descricao_vacina SET quantidade = quantidade - 1;";
+
+    }
 }

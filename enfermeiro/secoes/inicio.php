@@ -55,16 +55,6 @@
       <article class="mt-3 col-lg-4 col-md-6 col-sm-12">
         <div class="card border-success" style="width: 18rem;">
           <div class="card-body border-success">
-            <h5 class="card-title">Controle de vacinas</h5>
-            <p class="card-text"></p>
-            <a href="?secao=controledevacina" class="btn btn-success">Ir</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="mt-3 col-lg-4 col-md-6 col-sm-12">
-        <div class="card border-success" style="width: 18rem;">
-          <div class="card-body border-success">
             <h5 class="card-title">Cartão de vacina</h5>
             <p class="card-text"></p>
             <a href="?secao=cartaovacina" class="btn btn-success">Ir</a>

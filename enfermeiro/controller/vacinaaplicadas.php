@@ -18,5 +18,9 @@ $cadastra->setFields("id_vacina,id_descricao_vacina,id_paciente,id_funcionario,n
 $cadastra->setDados("'$nome','$lote','$id','$funcionario','$nome','$lote','$aplicacao ','$dose ','$laboaratorio'");
 $cadastra->insert();
 
+$atualizar = new manipulaDados();
+$atualizar -> updateQuantidade();
+
+
 echo '<script>alert("'.$cadastra->getStatus().'");</script>';
 echo "<script>location = '../home.php'; </script>";

@@ -7,6 +7,6 @@
 
 ## Documentação
 
-Para ter mais informações sobre a documentação leia a 
+Para ter mais informações sobre a documentação leia a [Wiki](https://github.com/Yamilla/carvavi/wiki)
 
 

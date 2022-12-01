@@ -1,6 +1,6 @@
 ## Carvavi: Sistema __Web__ para Controle de Vacinação de Pacientes Atendidos por Unidades Básicas de Saúde
 
-![GitHub](https://img.shields.io/github/license/Yamilla/carvavi?color=blue)
+![GitHub](https://img.shields.io/github/license/Yamilla/carvavi?color=red)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Yamilla/carvavi) 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Yamilla/carvavi)
 ![GitHub contributors](https://img.shields.io/github/contributors/Yamilla/carvavi)

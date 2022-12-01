@@ -1,12 +1,10 @@
-# Trabalho de conclusão de curso tecnolgo em analise e desenvolvimento de sistema
+## Carvavi: Sistema Web para Controle de Vacinação de Pacientes Atendidos por Unidades Básicas de Saúde
 
-## Instituto Federal de Goiás (IFG)
-# Proposta do trabalho 
+# Descrição 
 
- O sistema foi desenvolvido para ser usado dentro de uma unidade básica de saúde, para que facilite o trabalho dos tecnicos de enfermagem que são responsáveis pela sala de vacina.
-
+Carvavi é um sistema Web para controle do sistema de vacinação dentro de uma Unidade Básica de Saúde, permitindo cadastro de administradores, técnicos de enfermagem, pacientes e vacinas, bem como permitir emissão do espelho do cartão de vacina virtual de vacinas efetuadas em pacientes devidamente cadastrados.
 ## Documentação
 
-Para ter mais informações sobre a documentação leia a [Wiki](https://github.com/Yamilla/carvavi/wiki)
+Para mais informações, consulte a [Wiki](https://github.com/Yamilla/carvavi/wiki).
 
 

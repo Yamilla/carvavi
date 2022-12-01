@@ -27,7 +27,7 @@ author={Yamilla da Silva Calixto},
 pages={},
 school={Instituto Federal de Goiás - Campus Formosa},
 title={Sistema Web para Controle de Vacinação de Pacientes Atendidos por Unidades Básicas de Saúde},
-type={},
+type={Graduação em Tecnologia em Análise e Desenvolvimento de Sistemas},
 year={2022}}
 ```
 

@@ -9,7 +9,7 @@
 
 -- 
 
-Carvavi é um sistema Web que permite o controle do sistema de vacinação dentro de uma Unidade Básica de Saúde, permitindo cadastro de administradores, técnicos de enfermagem, pacientes e vacinas, bem como a emissão do espelho do **car**tão de **va**cina **vi**rtual de pacientes devidamente cadastrados.
+Carvavi é um sistema __Web__ que permite o controle do sistema de vacinação dentro de uma Unidade Básica de Saúde, permitindo cadastro de administradores, técnicos de enfermagem, pacientes e vacinas, bem como a emissão do espelho do **car**tão de **va**cina **vi**rtual de pacientes devidamente cadastrados.
 
 ### Documentação
 

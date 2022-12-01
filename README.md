@@ -29,3 +29,6 @@ type={},
 year={2022}}
 ```
 
+### Licença
+
+[Apache 2.0](https://github.com/Yamilla/carvavi/blob/master/LICENSE)

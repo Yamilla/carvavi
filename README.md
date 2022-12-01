@@ -28,7 +28,7 @@ pages={},
 school={Instituto Federal de Goiás - Campus Formosa},
 title={Sistema Web para Controle de Vacinação de Pacientes Atendidos por Unidades Básicas de Saúde},
 type={Graduação em Tecnologia em Análise e Desenvolvimento de Sistemas},
-year={2022}}
+year={2023}}
 ```
 
 -- 

@@ -1,4 +1,4 @@
-## CARVAVI: Sistema *Web* para Controle de Vacinação de Pacientes Atendidos em uma Unidades Básicas de Saúde
+## CARVAVI: Sistema *Web* para Controle de Vacinação de Pacientes Atendidos em Unidades Básicas de Saúde
 
 ![GitHub](https://img.shields.io/github/license/Yamilla/carvavi?color=red)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Yamilla/carvavi) 

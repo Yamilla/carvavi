@@ -22,5 +22,5 @@ $atualizar = new manipulaDados();
 $atualizar -> updateQuantidade();
 
 
-echo '<script>alert("'.$cadastra->getStatus().'");</script>';
+echo '<script>alert("Vacina aplicada com sucesso!");</script>';
 echo "<script>location = '../home.php'; </script>";

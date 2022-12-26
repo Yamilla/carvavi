@@ -69,9 +69,9 @@ $id = $_GET['id'];
                                 </select>
                         </div>
                         <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione o funcionario que vacinou: </label>
+                                <label for="exampleFormControlSelect1">Selecione o técnico de enfermagem que vacinou: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="func">
-                                <option selected>Nome do laboratorio</option>
+                                <option selected>Nome do técnico de enfermagem</option>
                                     <?php
                                     $busca = new manipulaDados();
                                     $busca->setTable("funcionario");

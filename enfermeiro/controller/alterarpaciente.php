@@ -1,6 +1,5 @@
 <?php
     include_once("../../classes/manipulaDados.php");
-    const CAMINHO_CARTAOVACINAS = "../../cartaovacinas/";
     function converte($String){
         return iconv("UTF-8", "ISO8859-1",$String);
     } 

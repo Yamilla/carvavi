@@ -1,6 +1,5 @@
 <?php
     include_once("../../classes/manipulaDados.php");
-    const CAMINHO_CARTAOVACINAS = "../../cartaovacinas/";
     function converte($String){
         return iconv("UTF-8", "ISO8859-1",$String);
     } 
@@ -28,7 +27,6 @@ $cadastra->setTable("paciente");
 $cadastra->setFields("nome_paciente,cpf,rg,sus,telefone,nascimento,rua,numero,bairro,cidade,estado,cep,email,usuario,senha,orgao_expedidor");
 $cadastra->setDados("'$nome','$cpf','$rg','$sus','$telefone','$data_nascimento','$rua','$numero','$bairro','$cidade','$estado','$cep','$email','$usuario','$senha','$orgao'");
 $cadastra->insert();
-mkdir(CAMINHO_CARTAOVACINAS . $nome, 0777);
 
 echo '<script>alert("'.$cadastra->getStatus().'");</script>';
 echo "<script>location = '../home.php'; </script>";

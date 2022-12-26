@@ -4,7 +4,7 @@ include_once("../classes/manipulaDados.php");
 
 <div class="container">
     <div class=" text-center mt-5 ">
-        <h1>Funcionários cadastrados</h1>
+        <h1>Técnico de enfermagem cadastrados</h1>
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>

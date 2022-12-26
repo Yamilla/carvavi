@@ -9,11 +9,11 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Funcionários
+          Técnicos de enfermagem
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="?secao=cadastrarfuncionario">Cadastrar Funcionários</a></li>
-            <li><a class="dropdown-item" href="?secao=funcionariocadastrado">Funcionários cadastrados</a></li>
+            <li><a class="dropdown-item" href="?secao=cadastrarfuncionario">Cadastrar técnico de enfermagem</a></li>
+            <li><a class="dropdown-item" href="?secao=funcionariocadastrado">Técnicos de enfermagem cadastrados</a></li>
           </ul>
         </li>
 

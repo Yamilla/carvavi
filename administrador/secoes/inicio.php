@@ -13,7 +13,7 @@
       <article class="mt-3 col-lg-4 col-md-6 col-sm-12">
         <div class="card border-success" style="width: 18rem;">
           <div class="card-body border-success">
-            <h5 class="card-title">Cadastrar funcionário</h5>
+            <h5 class="card-title">Cadastrar Técnico de Enfermagem</h5>
             <p class="card-text"></p>
             <a href="?secao=cadastrarfuncionario" class="btn btn-success">Ir</a>
           </div>
@@ -33,7 +33,7 @@
       <article class="mt-3 col-lg-4 col-md-6 col-sm-12">
         <div class="card border-success" style="width: 18rem;">
           <div class="card-body border-success">
-            <h5 class="card-title">Funcionários cadastrados</h5>
+            <h5 class="card-title">Técnicos de Enfermagem cadastrados</h5>
             <p class="card-text"></p>
             <a href="?secao=funcionariocadastrado" class="btn btn-success">Ir</a>
           </div>

@@ -20,7 +20,7 @@ $id_unidade = $_GET['iduni'];
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
-        <h1>Alterar dados do funcionário</h1>
+        <h1>Alterar dados dos técnicos de enfermagem</h1>
     </div>
     <div class="row ">
         <div class="col-lg-7 mx-auto">
@@ -29,7 +29,7 @@ $id_unidade = $_GET['iduni'];
                     <div class="container">
                         <form method="post" enctype="multipart/form-data" action="<?= "controller/alterarfuncionario.php?id=" . $id ?>">
                             <div class="mb-3">
-                                <label>Nome do funcionário: </label>
+                                <label>Nome: </label>
                                 <input type="text" name="txtNome" class="form-control" value="<?php echo $nome; ?>" required />
                             </div>
                             <div class="mb-3">
@@ -81,7 +81,7 @@ $id_unidade = $_GET['iduni'];
                                 <input type="text" name="txtCargo" class="form-control" value="<?php echo $cargo; ?>" required />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione a unidade que o funcionário trabalha: </label>
+                                <label for="exampleFormControlSelect1">Selecione a unidade que o técnico de enfermagem trabalha: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="id_unidade">
                                     <option selected>Nome da unidade</option>
                                     <?php

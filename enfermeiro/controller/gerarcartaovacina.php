@@ -13,7 +13,7 @@ $pdf->Image("../../img/Cartaovacina.png", 0, 0, $pdf->GetPageWidth(), $pdf->GetP
 
 while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
   $pdf->SetFont('Arial', 'b', 10);
-  $pdf->Cell(820, 230, utf8_decode($row['sus']), 0, 0, 'C');
+  $pdf->Cell(900, 230, utf8_decode($row['sus']), 0, 0, 'C');
   $pdf->ln(160);
   $pdf->Cell(190, 10, utf8_decode($row['nome_paciente']), 0, 0, 'C');
   $pdf->ln(25);

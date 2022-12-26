@@ -4,7 +4,7 @@ include_once("../classes/manipulaDados.php");
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
-        <h1>Cadastro de funcionário</h1>
+        <h1>Cadastro de técnico de enfermagem</h1>
     </div>
     <div class="row ">
         <div class="col-lg-7 mx-auto">
@@ -74,10 +74,10 @@ include_once("../classes/manipulaDados.php");
                             </div>
                             <div class="mb-3">
                                 <label>Senha: </label>
-                                <input type="text" name="txtSenha" class="form-control" placeholder="Senha" required />
+                                <input type="password" name="txtSenha" class="form-control" placeholder="Senha" required />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlSelect1">Selecione a unidade que o funcionário trabalha: </label>
+                                <label for="exampleFormControlSelect1">Selecione a unidade que o técnico de enfermagem trabalha: </label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="id_unidade">
                                     <option selected>Nome da unidade</option>
                                     <?php

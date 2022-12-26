@@ -2,7 +2,7 @@
     <div class="row justify-content-md-center h-100">
         <div class="row rounded shadow-lg col-lg-4 col-md-4 col-sm-12 panel">
             <section class="row title">
-                <h2 class="text-center">Cartão de vacina virtual</h2>
+                <h2 class="text-center">CARVAVI: Cartão de vacina virtual</h2>
                 <hr>
             </section>
             <ul class="nav nav-tabs mb-3 tab" id="pills-tab" role="tablist">
@@ -27,8 +27,7 @@
                             <div class="form-group mt-3">
                                 <input name="txtSenha" type="password" class="form-control" placeholder="Senha" required />
                             </div>
-                            <button type="submit" class="btn btn-primary mt-3 mb-3">Acessar</button>
-                            
+                            <button type="submit" class="btn btn-primary mt-3 mb-3">Acessar</button>   
                         </form>
                     </section>
                 </div>

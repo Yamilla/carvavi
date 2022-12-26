@@ -73,7 +73,7 @@ include_once("../classes/manipulaDados.php");
                             </div>
                             <div class="mb-3">
                                 <label>Senha: </label>
-                                <input type="text" name="txtSenha" class="form-control" placeholder="Senha" required />
+                                <input type="password" name="txtSenha" class="form-control" placeholder="Senha" required />
                             </div>
                             <div class="row justify-content-around">
                                 <div class="col-4">

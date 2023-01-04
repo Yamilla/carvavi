@@ -2,6 +2,7 @@
 include_once("../classes/manipulaDados.php");
 $id = $_GET['id'];
 ?>
+
 <div class="container">
     <div class=" text-center mt-5 ">
         <h1>Vacinar</h1>
@@ -19,7 +20,7 @@ $id = $_GET['id'];
                                     <?php
                                     $busca = new manipulaDados();
                                     $busca->setTable("vacina");
-                                    $resultado = $busca->getAllDataTable();
+                                    $resultado = $busca->escolhaVacina();
                                     while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                                     ?>
                                         <option value="<?= $row['id_vacina']; ?>"><?= $row['nome_vacina']; ?></option>
@@ -35,7 +36,7 @@ $id = $_GET['id'];
                                     <?php
                                     $busca = new manipulaDados();
                                     $busca->setTable("descricao_vacina");
-                                    $resultado = $busca->getAllDataTable();
+                                    $resultado = $busca->escolhaVacina();
                                     while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                                     ?>
                                         <option value="<?= $row['id_descricao_vacina']; ?>"><?= $row['lote']; ?></option>
@@ -59,7 +60,7 @@ $id = $_GET['id'];
                                     <?php
                                     $busca = new manipulaDados();
                                     $busca->setTable("descricao_vacina");
-                                    $resultado = $busca->getAllDataTable();
+                                    $resultado = $busca->escolhaVacina();
                                     while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                                     ?>
                                         <option value="<?= $row['id_descricao_vacina']; ?>"><?= $row['laboratorio']; ?></option>

@@ -3,10 +3,11 @@
   <hr>
   <?php 
   session_start();
-  $login = $_SESSION['usu'];
+  $login= $_SESSION['usu'];
   echo '<h4>Bem vindo(a), ' . $login .  '!</h4>';
   ?>
   <section>
+    <h5>Recomenda-se trocar a senha padrão  <a class="btn btn-outline-success" href="<?= "?secao=alterarsenha&login=". $login?>" role="button">Clique aqui</a> </h5>
     <h2>ACESSO RÁPIDO</h2>
     <hr>
     <div class="row d-line">

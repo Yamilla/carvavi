@@ -16,7 +16,7 @@
           <div class="card-body border-success">
             <h5 class="card-title">Dados Pessoais</h5>
             <p class="card-text"></p>
-            <a href="?secao=dadospessoais" class="btn btn-success">Ir</a>
+            <a href="<?= "?secao=dadospessoais&login=". $login?>" class="btn btn-success">Ir</a>
           </div>
         </div>
       </article>

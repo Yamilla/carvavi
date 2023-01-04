@@ -33,7 +33,5 @@ abstract class conexao{
         $this->totalFields = @mysqli_nun_rows($qr);
         return $this->totalFields;
     }
-
 }
-
 ?>

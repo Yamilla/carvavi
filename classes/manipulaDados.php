@@ -4,7 +4,7 @@ include_once("conexao.php");
 
 class manipulaDados extends conexao
 {
-    protected $sql, $qr, $table, $fields, $dados, $status, $fieldId, $valueId;
+    protected $sql, $qr, $table, $fields, $dados, $status, $fieldId, $valueId, $query;
 
     public function setTable($t)
     {
@@ -67,24 +67,32 @@ class manipulaDados extends conexao
     }
     public function validarLoginAdmin($login, $password)
     {
-        $this->sql = "SELECT * FROM administrador WHERE usuario = '$login' and senha = '$password'";
-        $this->query = self::execSQL($this->sql);
-        $linhas = @mysqli_num_rows($this->qr);
-        return $linhas;
+        $this->sql = "SELECT * FROM administrador WHERE usuario = '$login'";
+        $result = self::execSQL($this->sql);
+        $usuario = mysqli_fetch_assoc($result);
+        $senha = $usuario["senha"];
+        return password_verify(trim($password), $senha);
+        
     }
     public function validarLoginFuncionario($login, $password)
     {
-        $this->sql = "SELECT * FROM funcionario WHERE usuario = '$login' and senha = '$password'";
-        $this->query = self::execSQL($this->sql);
-        $linhas = @mysqli_num_rows($this->qr);
-        return $linhas;
+        $this->sql = "SELECT * FROM funcionario WHERE usuario = '$login'";
+        $result = self::execSQL($this->sql);
+        $usuario = mysqli_fetch_assoc($result);
+        $senha = $usuario["senha"];
+        return password_verify(trim($password), $senha);
     }
+
     public function validarLoginPaciente($login, $password)
     {
-        $this->sql = "SELECT * FROM paciente WHERE usuario = '$login' and senha = '$password'";
-        $this->query = self::execSQL($this->sql);
-        $linhas = @mysqli_num_rows($this->qr);
-        return $this->query;
+        $this->sql = "SELECT * FROM paciente WHERE usuario = '$login'";
+        //$this->query = self::execSQL($this->sql);
+        //$linhas = @mysqli_num_rows($this->qr);
+        //return $this->query;
+        $result = self::execSQL($this->sql);
+        $usuario = mysqli_fetch_assoc($result);
+        $senha = $usuario["senha"];
+        return password_verify(trim($password), $senha);
     }
     public function getById($id_paciente)
     {
@@ -93,7 +101,8 @@ class manipulaDados extends conexao
         return $this->query;
     }
 
-    public function vacinasAplicadas($id_paciente){
+    public function vacinasAplicadas($id_paciente)
+    {
         $this->sql = "SELECT * from vacinas_aplicadas
         INNER JOIN paciente on paciente.id_paciente = vacinas_aplicadas.id_paciente 
         INNER JOIN descricao_vacina ON descricao_vacina.id_descricao_vacina = vacinas_aplicadas.id_descricao_vacina
@@ -102,7 +111,8 @@ class manipulaDados extends conexao
         $this->query = self::execSQL($this->sql);
         return $this->query;
     }
-    public function cartaoVacina($id_paciente){
+    public function cartaoVacina($id_paciente)
+    {
         $this->sql = "SELECT * from vacinas_aplicadas
         INNER JOIN paciente on paciente.id_paciente = vacinas_aplicadas.id_paciente 
         INNER JOIN descricao_vacina ON descricao_vacina.id_descricao_vacina = vacinas_aplicadas.id_descricao_vacina
@@ -114,15 +124,42 @@ class manipulaDados extends conexao
         return $this->query;
     }
 
-    public function visualizarVacina($id_vacina){
-        $this->sql = "SELECT * from descricao_vacina INNER JOIN vacina on vacina.id_vacina = descricao_vacina.id_vacina WHERE  descricao_vacina.id_vacina = '$id_vacina'";
+    public function visualizarVacina($id_vacina)
+    {
+        $this->sql = "SELECT * from descricao_vacina INNER JOIN vacina on vacina.id_vacina = descricao_vacina.id_vacina WHERE  descricao_vacina.id_vacina = '$id_vacina' AND descricao_vacina.quantidade > 0";
         $this->query = self::execSQL($this->sql);
         return $this->query;
     }
-   
+
+    public function escolhaVacina()
+    {
+        $this->sql = "SELECT * from descricao_vacina INNER JOIN vacina on vacina.id_vacina = descricao_vacina.id_vacina AND descricao_vacina.quantidade > 0";
+        $this->query = self::execSQL($this->sql);
+        return $this->query;
+    }
+
     public function updateQuantidade()
     {
-        $this->sql = "UPDATE descricao_vacina SET quantidade = quantidade - 1;";
-
+        $this->sql = "UPDATE descricao_vacina SET quantidade = quantidade - 1 ";
+        $this->query = self::execSQL($this->sql);
+        return $this->query;
     }
+
+    public function updateSenhaAdmin($login, $senha)
+    {
+        $this->sql = "UPDATE administrador SET senha = '$senha' WHERE usuario = '$login'";
+        if (self::execSQL($this->sql)) {
+            $this->status = "Senha alterada com sucesso!";
+        } else {
+            $this->status = "Erro ao alterar";
+        }
+    }
+
+    public function mostrarDadosPessoais($login)
+    {
+        $this->sql = "SELECT * FROM $this->table WHERE usuario='$login'";
+        $this->query = self::execSQL($this->sql);
+        return $this->query;
+    }
+
 }

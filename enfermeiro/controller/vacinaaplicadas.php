@@ -12,14 +12,15 @@ $laboaratorio = $_POST['laboratorio'];
 $funcionario=$_POST['func'];
 
 
+
 $cadastra = new manipulaDados();
 $cadastra->setTable("vacinas_aplicadas");
 $cadastra->setFields("id_vacina,id_descricao_vacina,id_paciente,id_funcionario,nome,lote,data_aplicacao,dose,laboratorio");
 $cadastra->setDados("'$nome','$lote','$id','$funcionario','$nome','$lote','$aplicacao ','$dose ','$laboaratorio'");
 $cadastra->insert();
 
-$atualizar = new manipulaDados();
-$atualizar -> updateQuantidade();
+ $atualiza = new manipulaDados();
+ $atualiza-> updateQuantidade();
 
 
 echo '<script>alert("Vacina aplicada com sucesso!");</script>';

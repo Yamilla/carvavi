@@ -20,7 +20,7 @@ $id_unidade = $_GET['iduni'];
 ?>
 <div class="container">
     <div class=" text-center mt-5 ">
-        <h1>Alterar dados dos técnicos de enfermagem</h1>
+        <h1>Alterar dados do técnico de enfermagem</h1>
     </div>
     <div class="row ">
         <div class="col-lg-7 mx-auto">

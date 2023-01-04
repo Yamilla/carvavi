@@ -40,8 +40,8 @@ $id_vacina = $_GET['id'];
                                 <input type="hidden" name="recFabricacao" value="<?= $row['data_fabricacao']; ?>">
                                 <input type="hidden" name="recValidade" value="<?= $row['data_validade']; ?>">
                                 <input type="hidden" name="recLaboratorio" value="<?= $row['laboratorio']; ?>">
-                                <td><a class="btn btn-outline-warning" href="<?="?secao=alterarvacina&id=".$row['id_descricao_vacina']."&lote=".$row['lote']. "&quantidade=".$row['quantidade']."&fabricacao=".$row['data_fabricacao']. "&validade=".$row['data_validade']. "&laboratorio=".$row['laboratorio'] ?>" role="button">Alterar</a></td>
-                                <td><a class="btn btn-outline-danger" href="<?="controller/excluirvacina.php?id=".$row['id_descricao_vacina']?>" role="button">Excluir</a></td>
+                                <td><a class="btn btn-outline-warning" href="<?= "?secao=alterarvacina&id=" . $row['id_descricao_vacina'] . "&lote=" . $row['lote'] . "&quantidade=" . $row['quantidade'] . "&fabricacao=" . $row['data_fabricacao'] . "&validade=" . $row['data_validade'] . "&laboratorio=" . $row['laboratorio'] ?>" role="button">Alterar</a></td>
+                                <td><a class="btn btn-outline-danger" href="<?= "controller/excluirvacina.php?id=" . $row['id_descricao_vacina'] ?>" role="button">Excluir</a></td>
                             </tr>
                         </form>
                     <?php

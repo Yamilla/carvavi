@@ -2,7 +2,6 @@
 include_once("../classes/manipulaDados.php");
 
 ?>
-
 <div class="container">
     <div class=" text-center mt-5 ">
         <h1>Dados Pessoais</h1>
@@ -23,17 +22,15 @@ include_once("../classes/manipulaDados.php");
                         <th>Estado</th>
                         <th>CEP</th>
                         <th>Email</th>
-                        <th>Usuário</th>
-                        <th>Senha</th>
                         <th>Cartão de vacina</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $id_paciente=$_COOKIE['id_paciente'];
+                    $login = $_GET['login'];
                     $busca = new manipulaDados();
                     $busca->setTable("paciente");
-                    $resultado = $busca->getById($id_paciente);
+                    $resultado = $busca->mostrarDadosPessoais($login);
                     while ($row = @mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
                     ?>
                         <form method="post">
@@ -51,8 +48,6 @@ include_once("../classes/manipulaDados.php");
                                 <td><?= $row['estado']; ?></td>
                                 <td><?= $row['cep']; ?></td>
                                 <td><?= $row['email']; ?></td>
-                                <td><?= $row['usuario']; ?></td>
-                                <td><?= $row['senha']; ?></td>
                                 <input type="hidden" name="recNome" value="<?= $row['nome_paciente']; ?>">
                                 <input type="hidden" name="recCpf" value="<?= $row['cpf']; ?>">
                                 <input type="hidden" name="recRg" value="<?= $row['rg']; ?>">
@@ -66,8 +61,6 @@ include_once("../classes/manipulaDados.php");
                                 <input type="hidden" name="recEstado" value="<?= $row['estado']; ?>">
                                 <input type="hidden" name="recCep" value="<?= $row['cep']; ?>">
                                 <input type="hidden" name="recEmail" value="<?= $row['email']; ?>">
-                                <input type="hidden" name="recUsuario" value="<?= $row['usuario']; ?>">
-                                <input type="hidden" name="recSenha" value="<?= $row['senha']; ?>">
                                 <td><a class="btn btn-outline-success" href="<?="controller/gerarcartaovacina.php?id=" . $row['id_paciente'] ?>" role="button">Gerar</a></td>
                             </tr>
                         </form>

@@ -29,7 +29,7 @@ try {
     $cadastra->setFields("nome,cpf,rg,telefone,data_nascimento,rua,numero,bairro,cidade,estado,cep,cargo,email,usuario,senha,id_unidade,orgao_expedidor");
     $cadastra->setDados("'$nome','$cpf','$rg','$telefone','$data_nascimento','$rua','$numero','$bairro','$cidade','$estado','$cep','$cargo','$email','$usuario','$hashsenha','$id_unidade','$orgao'");
     $cadastra->insert();
-    echo '<script>alert("O paciente foi cadastrado com sucesso!");</script>';
+    echo '<script>alert("O técnico de enfermagem foi cadastrado com sucesso!");</script>';
     echo "<script>location = '../home.php'; </script>";
 
 } catch (mysqli_sql_exception $e) {
